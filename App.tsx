@@ -1,12 +1,11 @@
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 
-import { Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
-
+import Header from './components/organisms/Header';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -19,27 +18,10 @@ function App(): JSX.Element {
     );
   }
 
-  function Header() {
-    return (
-      <View style={styles.header}>
-        <Image
-          source={require("./assets/imgs/user.png")}
-          style={styles.userImg}
-        />
-        <Image
-          source={require("./assets/icons/search.png")}
-          style={styles.searchImg}
-        />
-      </View>
-    );
-  }
-
   const navTheme = DefaultTheme;
   navTheme.colors.background = "#F2F2F2";
 
   return (
-
-
     <NavigationContainer theme={navTheme}>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Group>
@@ -51,28 +33,8 @@ function App(): JSX.Element {
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer >
-
-
   );
 }
 
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: "#F2F2F2",
-    display: 'flex',
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingTop: 40,
-    width: "100%",
-  },
-  userImg: {
-    width: 40,
-    height: 40
-  },
-  searchImg: {
-    width: 24,
-    height: 24,
-  },
-});
+
 export default App;
