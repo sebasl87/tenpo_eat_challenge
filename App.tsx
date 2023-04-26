@@ -5,6 +5,7 @@ import { Text, View } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Header, HeaderLocation } from './components/organisms';
+import Location from './components/screens/Location';
 
 
 
@@ -29,7 +30,7 @@ function App(): JSX.Element {
           <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
           />
           <Stack.Screen name="Restaurant" component={HomeScreen} />
-          <Stack.Screen name="Location" component={HomeScreen} options={{ header: () => <HeaderLocation /> }} />
+          <Stack.Screen name="Location" component={Location} options={{ header: () => <HeaderLocation /> }} />
           <Stack.Screen name="SearchRestaurant" component={HomeScreen} />
         </Stack.Group>
       </Stack.Navigator>
