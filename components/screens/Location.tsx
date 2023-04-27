@@ -1,28 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { Platform, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
-import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions" // 👈
+import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 import Geolocation from "react-native-geolocation-service"
 import { useDispatch, useSelector } from 'react-redux';
 
-import { RootState } from '../../store';
+import { AppDispatch, RootState } from '../../store';
 import { fetchAddress } from '../../store/googleSlice';
 export interface IGoogleMaps {
     latitude: number;
     longitude: number;
 }
-/**
- * 
- * @returns 
- * TODO: Dispatch inside has permision
- */
+
 function Location() {
     const [location, setLocation] = useState<IGoogleMaps>()
-    const dispatch = useDispatch();
-    const { geocode, loading } = useSelector((state: RootState) => state.google);
-    console.log(geocode[0].formatted_address)
+    const dispatch = useDispatch<AppDispatch>();
+    const { loading } = useSelector((state: RootState) => state.google);
+
+    let permissionCheck = '';
     const handleLocationPermission = async () => {
-        let permissionCheck = '';
         if (Platform.OS === 'ios') {
             permissionCheck = await check(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
 
@@ -34,7 +30,16 @@ function Location() {
                     PERMISSIONS.IOS.LOCATION_WHEN_IN_USE,
                 );
                 permissionRequest === RESULTS.GRANTED
-                    ? console.warn('Location permission granted.')
+                    ? Geolocation.getCurrentPosition(
+                        position => {
+                            const { latitude, longitude } = position.coords
+                            setLocation({ latitude, longitude })
+                        },
+                        error => {
+                            console.log(error.code, error.message)
+                        },
+                        { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+                    )
                     : console.warn('location permission denied.');
             }
         }
@@ -50,7 +55,16 @@ function Location() {
                     PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
                 );
                 permissionRequest === RESULTS.GRANTED
-                    ? console.warn('Location permission granted.')
+                    ? Geolocation.getCurrentPosition(
+                        position => {
+                            const { latitude, longitude } = position.coords
+                            setLocation({ latitude, longitude })
+                        },
+                        error => {
+                            console.log(error.code, error.message)
+                        },
+                        { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+                    )
                     : console.warn('location permission denied.');
             }
         }
@@ -61,7 +75,7 @@ function Location() {
     }, [])
 
     useEffect(() => {
-        Geolocation.getCurrentPosition(
+        !location && Geolocation.getCurrentPosition(
             position => {
                 const { latitude, longitude } = position.coords
                 setLocation({ latitude, longitude })
@@ -72,33 +86,37 @@ function Location() {
             { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
         )
     }, [])
-    useEffect(() => { dispatch(fetchAddress()) }, [])
+
+    useEffect(() => {
+        dispatch(fetchAddress())
+    }, [location])
 
     return (
         <View
             style={styles.container}
         >
-            {location && (<MapView
-                style={styles.mapStyle}
-                provider={PROVIDER_GOOGLE}
-                initialRegion={{
-                    latitude: location.latitude,
-                    longitude: location.longitude,
-                    latitudeDelta: 0.0922,
-                    longitudeDelta: 0.0421,
-                }}
-                showsUserLocation={true}
-            >
-                <Marker
-                    image={require("../../assets/icons/pointer.png")}
-                    style={{ height: 50 }}
-                    coordinate={{
+            {loading ? <View><Text>CARGANDO-.-</Text></View> :
+                location ? (<MapView
+                    style={styles.mapStyle}
+                    provider={PROVIDER_GOOGLE}
+                    initialRegion={{
                         latitude: location.latitude,
                         longitude: location.longitude,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
                     }}
-                    title={'TENPO'}
-                />
-            </MapView>)}
+                    showsUserLocation={true}
+                >
+                    <Marker
+                        image={require("../../assets/icons/pointer.png")}
+                        style={{ height: 50 }}
+                        coordinate={{
+                            latitude: location.latitude,
+                            longitude: location.longitude,
+                        }}
+                        title={'TENPO'}
+                    />
+                </MapView>) : <View><Text>Esperando tu ubicación...</Text></View>}
         </View>
     );
 }

@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
     height: 6,
   },
   fontTitle: {
-    color: "#219f90",
+    color: "#2c8f7e",
     fontFamily: "Roboto-light",
     fontSize: 18,
     paddingTop: 3
