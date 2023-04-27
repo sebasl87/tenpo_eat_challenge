@@ -56,6 +56,15 @@ export const styles = StyleSheet.create({
     shadowRadius: 4,
     top: -16,
   },
+  containerMap: {
+    top: -32,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    height: 192
+  },
   mapStyle: {
     position: 'absolute',
     top: 0,
@@ -63,4 +72,16 @@ export const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
+  buttonAdd: {
+    alignContent: "center",
+    backgroundColor: "#3cbaa4",
+    borderRadius: 6,
+    height: 56,
+    justifyContent: "center",
+    marginHorizontal: 24,
+    shadowOffset: { height: 6, width: 0 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+  },
+  textarea: { borderWidth: 1, borderColor: "#E8E8E8", borderRadius: 6, height: 122 }
 })

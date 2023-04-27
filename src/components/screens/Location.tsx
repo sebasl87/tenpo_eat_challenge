@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 import Geolocation from "react-native-geolocation-service"
@@ -8,11 +8,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../store';
 import { fetchAddress } from '../../store/googleSlice';
 
-import { ContainerMapView } from '../organisms';
+import { ContainerAddressData, ContainerMapView } from '../organisms';
 import { IGoogleMaps } from '../organisms/ContainerMapView';
+
+import styled from 'styled-components/native';
+import { styles } from '../../styles/styles';
 
 function Location() {
     const [location, setLocation] = useState<IGoogleMaps>()
+    const [addresData, setAddresData] = useState<String>()
     const dispatch = useDispatch<AppDispatch>();
     const { loading } = useSelector((state: RootState) => state.google);
 
@@ -90,25 +94,28 @@ function Location() {
         dispatch(fetchAddress())
     }, [location])
 
+    const ButtonText = styled.Text`
+        align-self: "center";
+        color: #fff;
+        font-family: "Gotham-Bold";
+        font-size: 14px;
+        `
+
     return (
-        <View style={styles.container}>
-            {loading ? <View><Text>CARGANDO-.-</Text></View> :
-                location && <ContainerMapView latitude={location.latitude} longitude={location.longitude} />
-            }
-        </View>
+
+        loading ? <View><Text > CARGANDO -.-</Text></View > :
+            location ?
+                <View >
+                    <View style={styles.containerMap}>
+                        <ContainerMapView latitude={location.latitude} longitude={location.longitude} />
+                    </View>
+                    <ContainerAddressData handleOnChange={(text) => setAddresData(text)} />
+                    <TouchableOpacity style={styles.buttonAdd}><ButtonText style={{ alignSelf: "center" }} >AGREGA DIRECCÍON</ButtonText>
+                    </TouchableOpacity>
+                </View>
+                : <View><Text>Esperando tu ubicación...</Text></View>
+
     );
 }
-const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        top: -32,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        maxHeight: 192
-    },
 
-});
 export default Location

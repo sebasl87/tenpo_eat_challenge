@@ -20,7 +20,7 @@ function App(): JSX.Element {
   return (
     <Provider store={store}>
       <NavigationContainer theme={navTheme}>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Location">
           <Stack.Group>
             <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
             />
