@@ -60,7 +60,7 @@ const DetailCard: React.FC<IDetailCard> = ({ restaurantName, rate, lapseTime }) 
             <ContainerRate>
                 <RestaurantRate>
                     <ImageStar
-                        source={require("../../../assets/imgs/starmini.png")}
+                        source={require("../../assets/imgs/starmini.png")}
                     />
                     <Rate style={{ fontFamily: "Gotham-Light" }}>{rate}</Rate>
                 </RestaurantRate>

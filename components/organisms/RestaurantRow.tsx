@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 import { DiscountCircle, DetailCard, LogoRounded } from '../molecules'
 
 
-import RestaurantsLayout from '../atoms';
+import { RestaurantsLayout } from '../atoms';
 
 export interface IRestaurant { }
 
@@ -49,7 +49,7 @@ const linksData = [
     },
 ]
 
-const Restaurant: React.FC<IRestaurant> = () => (
+const RestaurantRow: React.FC<IRestaurant> = () => (
     <RestaurantsLayout>
         <Title style={{ fontFamily: "Gotham-Bold" }}>RESTAURANTES</Title>
         <ScrollView horizontal={true}>
@@ -67,4 +67,4 @@ const Restaurant: React.FC<IRestaurant> = () => (
 );
 
 
-export default Restaurant
+export default RestaurantRow

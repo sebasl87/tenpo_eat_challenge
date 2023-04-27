@@ -1,11 +1,11 @@
 import React from 'react'
-import { Restaurant } from '../organisms'
+import { RestaurantRow } from '../organisms'
 
 
 function HomeScreen() {
     return (
         <>
-            <Restaurant />
+            <RestaurantRow />
         </>
     );
 }
