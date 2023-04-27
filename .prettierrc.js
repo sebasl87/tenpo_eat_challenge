@@ -1,6 +1,25 @@
 module.exports = {
-  arrowParens: 'avoid',
+  arrowParens: "avoid",
   bracketSameLine: true,
+  bracketSpacing: true,
+  endOfLine: "lf",
+  semi: true,
   singleQuote: true,
-  trailingComma: 'all',
+  tabWidth: 2,
+  trailingComma: "es5",
+  useTabs: false,
+  overrides: [
+    {
+      files: "*.{json}",
+      options: {
+        parser: "json",
+      },
+    },
+    {
+      files: "*.{ts,tsx}",
+      options: {
+        parser: "typescript",
+      },
+    },
+  ],
 };
