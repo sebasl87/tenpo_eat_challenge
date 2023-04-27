@@ -5,26 +5,19 @@ import { Text, View } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Header, HeaderLocation } from './components/organisms';
+import { HomeScreen } from './components/screens';
 
 
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
 
-  function HomeScreen() {
-    return (
-      <View style={{ backgroundColor: "orange" }}>
-        <Text >New User Screen</Text>
-      </View>
-    );
-  }
-
   const navTheme = DefaultTheme;
   navTheme.colors.background = "#F2F2F2";
 
   return (
     <NavigationContainer theme={navTheme}>
-      <Stack.Navigator initialRouteName="Location">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Group>
           <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
           />
