@@ -16,7 +16,7 @@ const Title = styled.Text`
 
 const linksData = [
     {
-        uri: require("../../assets/imgs/mc.png"),
+        uri: require("../../../assets/imgs/mc.png"),
         discount: "50",
         restaurantName: "Mcdonalds",
         rate: "3.5",
@@ -24,7 +24,7 @@ const linksData = [
         bgColor: ""
     },
     {
-        uri: require("../../assets/imgs/melt.png"),
+        uri: require("../../../assets/imgs/melt.png"),
         discount: "30",
         restaurantName: "MELT pizzas",
         rate: "4.5",
@@ -32,7 +32,7 @@ const linksData = [
         bgColor: ""
     },
     {
-        uri: require("../../assets/imgs/yokono.png"),
+        uri: require("../../../assets/imgs/yokono.png"),
         discount: "20",
         restaurantName: "YOKONO",
         rate: "3.5",
@@ -40,7 +40,7 @@ const linksData = [
         bgColor: "#000"
     },
     {
-        uri: require("../../assets/imgs/papa.png"),
+        uri: require("../../../assets/imgs/papa.png"),
         discount: "10",
         restaurantName: "Papa John's",
         rate: "4.5",

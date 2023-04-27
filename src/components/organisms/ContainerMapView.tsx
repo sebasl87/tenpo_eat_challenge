@@ -23,7 +23,7 @@ const ContainerMapView: React.FC<IGoogleMaps> = ({ latitude, longitude }) => {
             showsUserLocation={true}
         >
             <Marker
-                image={require("../../assets/icons/pointer.png")}
+                image={require("../../../assets/icons/pointer.png")}
                 style={{ height: 50 }}
                 coordinate={{
                     latitude: latitude,

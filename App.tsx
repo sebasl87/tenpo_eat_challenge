@@ -3,11 +3,11 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store } from './src/store';
 
-import { Header, HeaderLocation } from './components/organisms';
+import { Header, HeaderLocation } from './src/components/organisms';
 
-import { HomeScreen, Location } from './components/screens';
+import { HomeScreen, Location } from './src/components/screens';
 
 
 
@@ -20,7 +20,7 @@ function App(): JSX.Element {
   return (
     <Provider store={store}>
       <NavigationContainer theme={navTheme}>
-        <Stack.Navigator initialRouteName="Location">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Group>
             <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
             />
