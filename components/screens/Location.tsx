@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 import Geolocation from "react-native-geolocation-service"
 import { useDispatch, useSelector } from 'react-redux';
 
 import { AppDispatch, RootState } from '../../store';
 import { fetchAddress } from '../../store/googleSlice';
-export interface IGoogleMaps {
-    latitude: number;
-    longitude: number;
-}
+
+import { ContainerMapView } from '../organisms';
+import { IGoogleMaps } from '../organisms/ContainerMapView';
 
 function Location() {
     const [location, setLocation] = useState<IGoogleMaps>()
@@ -92,31 +91,10 @@ function Location() {
     }, [location])
 
     return (
-        <View
-            style={styles.container}
-        >
+        <View style={styles.container}>
             {loading ? <View><Text>CARGANDO-.-</Text></View> :
-                location ? (<MapView
-                    style={styles.mapStyle}
-                    provider={PROVIDER_GOOGLE}
-                    initialRegion={{
-                        latitude: location.latitude,
-                        longitude: location.longitude,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
-                    }}
-                    showsUserLocation={true}
-                >
-                    <Marker
-                        image={require("../../assets/icons/pointer.png")}
-                        style={{ height: 50 }}
-                        coordinate={{
-                            latitude: location.latitude,
-                            longitude: location.longitude,
-                        }}
-                        title={'TENPO'}
-                    />
-                </MapView>) : <View><Text>Esperando tu ubicación...</Text></View>}
+                location && <ContainerMapView latitude={location.latitude} longitude={location.longitude} />
+            }
         </View>
     );
 }
@@ -131,12 +109,6 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         maxHeight: 192
     },
-    mapStyle: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-    },
+
 });
 export default Location
