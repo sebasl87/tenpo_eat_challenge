@@ -8,7 +8,13 @@ export interface IGoogleMaps {
     latitude: number;
     longitude: number;
 }
-
+/**
+ * 
+ * @returns 
+ * TODO: api para buscar la calle https://maps.googleapis.com/maps/api/geocode/json?latlng=-34.6971623122228,-58.502765247034986&key=AIzaSyANfDbCIjSA6Jd3TnUJdGvmB-GNeFlU4pY
+ * Agregar Redux toolkit primero
+ * clean code
+ */
 function Location() {
     const [location, setLocation] = useState<IGoogleMaps>()
 
@@ -66,7 +72,7 @@ function Location() {
 
     return (
         <View
-            style={styles.mapStyle}
+            style={styles.container}
         >
             {location && (<MapView
                 style={styles.mapStyle}
@@ -86,22 +92,22 @@ function Location() {
                         latitude: location.latitude,
                         longitude: location.longitude,
                     }}
-                    title={'Test Marker'}
+                    title={'TENPO'}
                 />
             </MapView>)}
         </View>
     );
 }
 const styles = StyleSheet.create({
-
     container: {
         position: 'absolute',
-        top: 0,
+        top: -32,
         left: 0,
         right: 0,
         bottom: 0,
         alignItems: 'center',
         justifyContent: 'flex-end',
+        maxHeight: 192
     },
     mapStyle: {
         position: 'absolute',
