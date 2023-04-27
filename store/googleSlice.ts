@@ -50,7 +50,6 @@ export enum LocationType {
 export const fetchAddress = createAsyncThunk(
   'google/fetchAddress',
   async () => {
-
     const response = await fetch(
       `${REACT_APP_GOOGLE_GEOCODE_URL}latlng=-34.6971623122228,-58.502765247034986&key=${REACT_APP_GOOGLE_GEOCODE_KEY}`,
     );

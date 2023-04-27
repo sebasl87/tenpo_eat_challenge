@@ -5,23 +5,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
-import { Text, View } from 'react-native';
-
 import { Header, HeaderLocation } from './components/organisms';
-import Location from './components/screens/Location';
+
+import { HomeScreen, Location } from './components/screens';
 
 
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
-
-  function HomeScreen() {
-    return (
-      <View style={{ backgroundColor: "orange" }}>
-        <Text >New User Screen</Text>
-      </View>
-    );
-  }
 
   const navTheme = DefaultTheme;
   navTheme.colors.background = "#F2F2F2";
