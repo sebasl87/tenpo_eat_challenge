@@ -1,20 +1,62 @@
-import React from 'react'
-import { StyleSheet, View } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import React, { useEffect } from 'react'
+import { Platform, StyleSheet, View } from 'react-native';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions" // 👈
 
 function Location() {
+    const handleLocationPermission = async () => { // 👈
+        let permissionCheck = '';
+        if (Platform.OS === 'ios') {
+            permissionCheck = await check(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
+
+            if (
+                permissionCheck === RESULTS.BLOCKED ||
+                permissionCheck === RESULTS.DENIED
+            ) {
+                const permissionRequest = await request(
+                    PERMISSIONS.IOS.LOCATION_WHEN_IN_USE,
+                );
+                permissionRequest === RESULTS.GRANTED
+                    ? console.warn('Location permission granted.')
+                    : console.warn('location permission denied.');
+            }
+        }
+
+        if (Platform.OS === 'android') {
+            permissionCheck = await check(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+
+            if (
+                permissionCheck === RESULTS.BLOCKED ||
+                permissionCheck === RESULTS.DENIED
+            ) {
+                const permissionRequest = await request(
+                    PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
+                );
+                permissionRequest === RESULTS.GRANTED
+                    ? console.warn('Location permission granted.')
+                    : console.warn('location permission denied.');
+            }
+        }
+    };
+
+    useEffect(() => {
+        handleLocationPermission()
+    }, [])
+
     return (
         <View
             style={styles.mapStyle}
         >
             <MapView
                 style={styles.mapStyle}
+                provider={PROVIDER_GOOGLE}
                 initialRegion={{
                     latitude: 37.78825,
                     longitude: -122.4324,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
                 }}
+                showsUserLocation={true}
             >
                 <Marker
                     image={require("../../assets/icons/pointer.png")}
