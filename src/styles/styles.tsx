@@ -83,5 +83,22 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 4,
   },
-  textarea: { borderWidth: 1, borderColor: "#E8E8E8", borderRadius: 6, height: 122 }
+  textarea: {
+    borderWidth: 1,
+    borderColor: "#E8E8E8",
+    borderRadius: 6,
+    height: 122
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+    backgroundColor: "#ADADAD",
+    opacity: 0.5
+  },
+  emptyState: {
+    alignItems: 'center',
+    marginTop: "25%",
+  }
 })

@@ -9,10 +9,15 @@ import { Header, HeaderLocation } from './src/components/organisms';
 
 import { HomeScreen, Location } from './src/components/screens';
 
-
+export type RootStackParamTenpo = {
+  Home: undefined;
+  Location: undefined;
+  Restaurant: undefined;
+  SearchRestaurant: undefined;
+};
 
 function App(): JSX.Element {
-  const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator<RootStackParamTenpo>();
 
   const navTheme = DefaultTheme;
   navTheme.colors.background = "#F2F2F2";
