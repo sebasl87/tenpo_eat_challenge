@@ -3,7 +3,10 @@ import { Platform, StyleSheet, View } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions" // 👈
 import Geolocation from "react-native-geolocation-service"
+import { useDispatch, useSelector } from 'react-redux';
 
+import { RootState } from '../../store';
+import { fetchAddress } from '../../store/googleSlice';
 export interface IGoogleMaps {
     latitude: number;
     longitude: number;
@@ -11,13 +14,13 @@ export interface IGoogleMaps {
 /**
  * 
  * @returns 
- * TODO: api para buscar la calle https://maps.googleapis.com/maps/api/geocode/json?latlng=-34.6971623122228,-58.502765247034986&key=AIzaSyANfDbCIjSA6Jd3TnUJdGvmB-GNeFlU4pY
- * Agregar Redux toolkit primero
- * clean code
+ * TODO: Dispatch inside has permision
  */
 function Location() {
     const [location, setLocation] = useState<IGoogleMaps>()
-
+    const dispatch = useDispatch();
+    const { geocode, loading } = useSelector((state: RootState) => state.google);
+    console.log(geocode[0].formatted_address)
     const handleLocationPermission = async () => {
         let permissionCheck = '';
         if (Platform.OS === 'ios') {
@@ -69,6 +72,7 @@ function Location() {
             { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
         )
     }, [])
+    useEffect(() => { dispatch(fetchAddress()) }, [])
 
     return (
         <View
