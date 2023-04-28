@@ -6,3 +6,5 @@ export { default as ContainerAddressData } from "./ContainerAddressData";
 export { default as CategoriesRow } from "./CategoriesRow";
 export { default as FavoritesRow } from "./FavoritesRow";
 export { default as HomeLocation } from './HomeLocation';
+export { default as Restaurants } from './Restaurants';
+export { default as HeaderRestaurant } from "./HeaderRestaurant";

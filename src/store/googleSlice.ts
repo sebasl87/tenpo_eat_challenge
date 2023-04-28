@@ -47,9 +47,9 @@ export enum LocationType {
   Rooftop = 'ROOFTOP',
 }
 
-export const fetchAddress: (arg0: Location) => void = createAsyncThunk(
+export const fetchAddress = createAsyncThunk(
   'google/fetchAddress',
-  async ({ lat, lng }) => {
+  async ({ lat, lng }: Location) => {
     const response = await fetch(
       `${REACT_APP_GOOGLE_GEOCODE_URL}latlng=${
         lat + ',' + lng

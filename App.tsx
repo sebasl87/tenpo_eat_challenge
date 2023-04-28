@@ -5,9 +5,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 
-import { Header, HeaderLocation } from './src/components/organisms';
+import { Header, HeaderLocation, HeaderRestaurant } from './src/components/organisms';
 
-import { HomeScreen, Location } from './src/components/screens';
+import { HomeScreen, Location, RestaurantDetail } from './src/components/screens';
 import { Text, View } from 'react-native';
 
 export type RootStackParamTenpo = {
@@ -16,6 +16,7 @@ export type RootStackParamTenpo = {
   Restaurant: undefined;
   SearchRestaurant: undefined;
   LocationSearch: undefined;
+  RestaurantDetail: undefined;
 };
 
 function Location2() {
@@ -43,6 +44,7 @@ function App(): JSX.Element {
             <Stack.Screen name="Location" component={Location} options={{ header: () => <HeaderLocation title="Agregar dirección de la entrega" /> }} />
             <Stack.Screen name="LocationSearch" component={Location2} options={{ header: () => <HeaderLocation title="Esperando tu ubicación..." /> }} />
             <Stack.Screen name="SearchRestaurant" component={HomeScreen} />
+            <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} options={{ header: () => <HeaderRestaurant /> }} />
           </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer >
