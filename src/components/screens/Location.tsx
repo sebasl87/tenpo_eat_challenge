@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Image, Modal, Platform, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Modal, Platform, Text, TouchableOpacity, View } from 'react-native';
 
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 import Geolocation from "react-native-geolocation-service"
@@ -22,8 +22,9 @@ function Location() {
     const dispatch = useDispatch<AppDispatch>();
     const { loading, geocode } = useSelector((state: RootState) => state.google);
     const navigation = useNavigation()
+    const { address } = useSelector((state: RootState) => state.address);
 
-    const handleDispatch = () => { dispatch(setAddress({ formated_address: geocode[0]?.formatted_address, extra_data_address: addresData })), navigation.navigate("Home") }
+    const handleDispatch = () => { dispatch(setAddress({ formated_address: geocode && geocode[0]?.formatted_address, extra_data_address: addresData })), navigation.navigate("Home") }
 
     let permissionCheck = '';
     const handleLocationPermission = async () => {
@@ -41,14 +42,14 @@ function Location() {
                     ? Geolocation.getCurrentPosition(
                         position => {
                             const { latitude, longitude } = position.coords
-                            setLocation({ latitude, longitude })
+                            setLocation({ lat: latitude, lng: longitude })
                         },
                         error => {
                             console.log(error.code, error.message)
                         },
                         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
                     )
-                    : console.warn('location permission denied.');
+                    : !address.formated_address && navigation.navigate("LocationSearch");
             }
         }
 
@@ -66,14 +67,14 @@ function Location() {
                     ? Geolocation.getCurrentPosition(
                         position => {
                             const { latitude, longitude } = position.coords
-                            setLocation({ latitude, longitude })
+                            setLocation({ lat: latitude, lng: longitude })
                         },
                         error => {
                             console.log(error.code, error.message)
                         },
                         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
                     )
-                    : console.warn('location permission denied.');
+                    : !address.formated_address && navigation.navigate("LocationSearch");
             }
         }
     };
@@ -83,20 +84,25 @@ function Location() {
     }, [])
 
     useEffect(() => {
-        !location && Geolocation.getCurrentPosition(
-            position => {
-                const { latitude, longitude } = position.coords
-                setLocation({ latitude, longitude })
-            },
-            error => {
-                console.log(error.code, error.message)
-            },
-            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-        )
-    }, [])
+        address && setLocation(address.geolocation)
+    }, [address])
+
+    // useEffect(() => {
+    //     !location && Geolocation.getCurrentPosition(
+    //         position => {
+    //             const { latitude, longitude } = position.coords
+    //             setLocation({ lat: latitude, lng: longitude })
+    //         },
+    //         error => {
+    //             console.log(error.code, error.message)
+    //         },
+    //         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+    //     )
+    // }, [])
 
     useEffect(() => {
-        dispatch(fetchAddress())
+        console.log("fetchadres")
+        location && dispatch(fetchAddress(location))
     }, [location])
 
     const ButtonText = styled.Text`
@@ -118,7 +124,7 @@ function Location() {
             {location ?
                 <View>
                     <View style={styles.containerMap}>
-                        <ContainerMapView latitude={location.latitude} longitude={location.longitude} />
+                        <ContainerMapView lat={location.lat} lng={location.lng} />
                     </View>
                     <ContainerAddressData handleOnChange={(text) => setAddresData(text)} />
                     <TouchableOpacity style={styles.buttonAdd} onPress={() => handleDispatch()}><ButtonText style={{ alignSelf: "center" }} >AGREGA DIRECCÍON</ButtonText>

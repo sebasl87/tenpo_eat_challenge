@@ -4,18 +4,18 @@ import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { styles } from '../../styles/styles';
 
 export interface IGoogleMaps {
-    latitude: number;
-    longitude: number;
+    lat: number;
+    lng: number;
 }
 
-const ContainerMapView: React.FC<IGoogleMaps> = ({ latitude, longitude }) => {
-
+const ContainerMapView: React.FC<IGoogleMaps> = ({ lat, lng }) => {
+    console.log(lat, lng)
     return <MapView
         style={styles.mapStyle}
         provider={PROVIDER_GOOGLE}
         initialRegion={{
-            latitude: latitude,
-            longitude: longitude,
+            latitude: lat,
+            longitude: lng,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
         }}
@@ -25,8 +25,8 @@ const ContainerMapView: React.FC<IGoogleMaps> = ({ latitude, longitude }) => {
             image={require("../../../assets/icons/pointer.png")}
             style={{ height: 50 }}
             coordinate={{
-                latitude: latitude,
-                longitude: longitude,
+                latitude: lat,
+                longitude: lng,
             }}
             title={'TENPO'}
         />

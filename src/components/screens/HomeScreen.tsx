@@ -8,6 +8,7 @@ import { RootState } from '../../store';
 
 function HomeScreen() {
     const { address } = useSelector((state: RootState) => state.address);
+
     return (
         <>
             <HomeLocation address={address} />
