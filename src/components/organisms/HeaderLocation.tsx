@@ -14,12 +14,14 @@ const Header: React.FC<IHeader> = ({ title }) => {
     const route = useRoute();
 
     return (
-        <View style={{
-            height: 1200,
-            width: '100%',
-            position: 'absolute',
-            zIndex: 100,
-        }}>
+        <View
+            style={route.name === "LocationSearch" && {
+                height: 1200,
+                width: '100%',
+                position: 'absolute',
+                zIndex: 100,
+            }}
+        >
             <View style={styles.headerLocation}>
                 <View style={{ marginBottom: 32, display: "flex", flexDirection: "row" }}>
                     <Image

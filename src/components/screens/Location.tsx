@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Image, Modal, Platform, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Modal, Platform, Text, TouchableOpacity, View } from 'react-native';
 
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 import Geolocation from "react-native-geolocation-service"
