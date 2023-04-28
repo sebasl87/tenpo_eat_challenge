@@ -21,7 +21,6 @@ function Location() {
     const [addresData, setAddresData] = useState<string>()
     const dispatch = useDispatch<AppDispatch>();
     const { loading, geocode } = useSelector((state: RootState) => state.google);
-    // const { address } = useSelector((state: RootState) => state.address);
     const navigation = useNavigation()
 
     const handleDispatch = () => { dispatch(setAddress({ formated_address: geocode[0]?.formatted_address, extra_data_address: addresData })), navigation.navigate("Home") }
