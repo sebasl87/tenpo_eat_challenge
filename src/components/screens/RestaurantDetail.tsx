@@ -7,7 +7,7 @@ import { useRoute } from '@react-navigation/native';
 function RestaurantDetail() {
     const route = useRoute()
     const { resto } = route.params;
-    console.log(resto)
+
     return (
         <>
             <RestaurantsLayout>

@@ -99,8 +99,7 @@ function Location() {
             { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
         )
     }, [])
-    console.log(address)
-    console.log(location)
+
     useEffect(() => {
         location && dispatch(fetchAddress(location))
     }, [location])
