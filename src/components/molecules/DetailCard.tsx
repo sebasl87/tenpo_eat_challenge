@@ -7,7 +7,6 @@ export interface IDetailCard {
     restaurantName?: string;
     rate?: string;
     lapseTime?: string;
-
 }
 
 const ImageStar = styled.Image`
@@ -17,40 +16,40 @@ const ImageStar = styled.Image`
 `
 
 const RestaurantNameContainer = styled.View`
-width: 100%;
-max-width: 104px;
-align-items: center;
-display: flex;
+    width: 100%;
+    max-width: 104px;
+    align-items: center;
+    display: flex;
 `
 
 const RestaurantRate = styled.View`
-flex-direction: row;
-display: flex;
-align-items: center;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
 `
 
 const ContainerRate = styled.View`
-flex-direction: row;
-width: 100%;
-max-width: 104px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 
 const NameRestaurant = styled.Text`
-color: #333333;
-font-size: 14px;
+    color: #333333;
+    font-size: 14px;
 `
 
 const Rate = styled.Text`
-color: #333333;
-font-size: 12px;
+    color: #333333;
+    font-size: 12px;
 `
 
 const LapseTimeText = styled.Text`
-color: #333333;
-font-size: 12px;
+    color: #333333;
+    font-size: 12px;
 `
 
 const DetailCard: React.FC<IDetailCard> = ({ restaurantName, rate, lapseTime }) => {
@@ -62,10 +61,10 @@ const DetailCard: React.FC<IDetailCard> = ({ restaurantName, rate, lapseTime }) 
                     <ImageStar
                         source={require("../../../assets/imgs/starmini.png")}
                     />
-                    <Rate style={{ fontFamily: "Gotham-Light" }}>{rate}</Rate>
+                    <Rate style={{ fontFamily: "Gotham-Medium" }}>{rate}</Rate>
                 </RestaurantRate>
                 <View>
-                    <LapseTimeText style={{ fontFamily: "Gotham-Light" }}>{lapseTime} min</LapseTimeText>
+                    <LapseTimeText style={{ fontFamily: "Gotham-Medium" }}>{lapseTime} min</LapseTimeText>
                 </View>
             </ContainerRate>
         </View>
