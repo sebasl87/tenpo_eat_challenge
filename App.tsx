@@ -14,7 +14,9 @@ export type RootStackParamTenpo = {
   Location: undefined;
   Restaurant: undefined;
   SearchRestaurant: undefined;
+  SearchLocation: undefined;
 };
+
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator<RootStackParamTenpo>();
@@ -30,7 +32,8 @@ function App(): JSX.Element {
             <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
             />
             <Stack.Screen name="Restaurant" component={HomeScreen} />
-            <Stack.Screen name="Location" component={Location} options={{ header: () => <HeaderLocation /> }} />
+            <Stack.Screen name="Location" component={Location} options={{ header: () => <HeaderLocation title="Agregar dirección de la entrega" /> }} />
+            <Stack.Screen name="SearchLocation" component={Location} options={{ header: () => <HeaderLocation title="Esperando tu ubicación..." /> }} />
             <Stack.Screen name="SearchRestaurant" component={HomeScreen} />
           </Stack.Group>
         </Stack.Navigator>

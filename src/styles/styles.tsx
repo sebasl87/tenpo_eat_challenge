@@ -100,5 +100,16 @@ export const styles = StyleSheet.create({
   emptyState: {
     alignItems: 'center',
     marginTop: "25%",
+  },
+  textInputContainer: {
+    backgroundColor: "#fff",
+    borderRadius: 50,
+    minHeight: 56,
+    paddingLeft: 16,
+    shadowOffset: { height: 6, width: 0 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    top: -16,
+    width: "100%",
   }
 })
