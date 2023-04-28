@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 40,
     width: "100%",
-    overflow: "hidden"
+    // overflow: "hidden"
+
   },
   headerLocation: {
     backgroundColor: "#D4F9F5",
