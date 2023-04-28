@@ -8,6 +8,7 @@ import { store } from './src/store';
 import { Header, HeaderLocation } from './src/components/organisms';
 
 import { HomeScreen, Location } from './src/components/screens';
+import { Text, View } from 'react-native';
 
 export type RootStackParamTenpo = {
   Home: undefined;
@@ -17,6 +18,13 @@ export type RootStackParamTenpo = {
   LocationSearch: undefined;
 };
 
+function Location2() {
+  return (
+    <View style={{ backgroundColor: "orange" }}>
+      <Text >New User Screen</Text>
+    </View>
+  );
+}
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator<RootStackParamTenpo>();
@@ -33,7 +41,7 @@ function App(): JSX.Element {
             />
             <Stack.Screen name="Restaurant" component={HomeScreen} />
             <Stack.Screen name="Location" component={Location} options={{ header: () => <HeaderLocation title="Agregar dirección de la entrega" /> }} />
-            <Stack.Screen name="LocationSearch" component={Location} options={{ header: () => <HeaderLocation title="Esperando tu ubicación..." /> }} />
+            <Stack.Screen name="LocationSearch" component={Location2} options={{ header: () => <HeaderLocation title="Esperando tu ubicación..." /> }} />
             <Stack.Screen name="SearchRestaurant" component={HomeScreen} />
           </Stack.Group>
         </Stack.Navigator>

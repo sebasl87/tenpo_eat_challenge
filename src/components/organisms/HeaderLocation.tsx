@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Image, Text, TextInput, View } from 'react-native';
 import { styles } from '../../styles/styles';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../store';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../store';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { REACT_APP_GOOGLE_GEOCODE_KEY } from '@env';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { setAddress } from '../../store/addressSlice';
+import { Location, clearGeocode } from '../../store/googleSlice';
 export interface IHeader {
     title: string
 }
+export interface IHandleDispatch { address: string, coordinates?: Location }
+
 const Header: React.FC<IHeader> = ({ title }) => {
     const { geocode } = useSelector((state: RootState) => state.google);
+    const { address } = useSelector((state: RootState) => state.address);
+
     const route = useRoute();
+    const navigation = useNavigation()
+    const dispatch = useDispatch<AppDispatch>();
+
+    useEffect(() => { route.name === "LocationSearch" && dispatch(clearGeocode()) }, [geocode])
+
+    const handleDispatch: (arg0: IHandleDispatch) => void = ({ address, coordinates }) => { dispatch(setAddress({ formated_address: address, geolocation: coordinates })), navigation.navigate("Location") }
 
     return (
         <View
@@ -32,7 +44,7 @@ const Header: React.FC<IHeader> = ({ title }) => {
                 </View>
             </View>
             {route.name === "Location" ?
-                <TextInput clearButtonMode="always" placeholder='Escribe tu dirección' defaultValue={geocode && geocode[0]?.formatted_address} style={{ ...styles.fontTitle, ...styles.inputLocation, fontSize: 16 }} />
+                <TextInput clearButtonMode="always" placeholder='Escribe tu dirección' defaultValue={address ? address.formated_address : geocode && geocode[0]?.formatted_address} style={{ ...styles.fontTitle, ...styles.inputLocation, fontSize: 16 }} />
                 :
                 <GooglePlacesAutocomplete
                     placeholder='Escribe tu dirección'
@@ -42,14 +54,13 @@ const Header: React.FC<IHeader> = ({ title }) => {
                     renderDescription={row => row.description}
 
                     onPress={(data, details = null) => {
-
-                        console.log(data.description);
+                        handleDispatch({ address: data?.description, coordinates: details?.geometry.location })
                     }}
 
                     query={{
                         key: REACT_APP_GOOGLE_GEOCODE_KEY,
                         language: 'es',
-                        types: "address",
+                        types: "geocode",
                         components: 'country:cl',
                     }}
                     renderRow={(rowData) => {

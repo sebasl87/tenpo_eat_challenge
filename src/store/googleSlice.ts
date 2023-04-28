@@ -49,12 +49,14 @@ export enum LocationType {
 
 export const fetchAddress = createAsyncThunk(
   'google/fetchAddress',
-  async () => {
+  async ({ lat, lng }) => {
     const response = await fetch(
-      `${REACT_APP_GOOGLE_GEOCODE_URL}latlng=-34.6971623122228,-58.502765247034986&key=${REACT_APP_GOOGLE_GEOCODE_KEY}`,
+      `${REACT_APP_GOOGLE_GEOCODE_URL}latlng=${
+        lat + ',' + lng
+      }&key=${REACT_APP_GOOGLE_GEOCODE_KEY}`
     );
     return (await response.json()).results;
-  },
+  }
 );
 
 const initialGoogleState = {
@@ -65,7 +67,11 @@ const initialGoogleState = {
 export const googleSlice = createSlice({
   name: 'google',
   initialState: initialGoogleState,
-  reducers: {},
+  reducers: {
+    clearGeocode(state) {
+      state = initialGoogleState;
+    },
+  },
   extraReducers: builder => {
     builder.addCase(fetchAddress.pending, state => {
       state.loading = true;
@@ -80,4 +86,5 @@ export const googleSlice = createSlice({
   },
 });
 
+export const { clearGeocode } = googleSlice.actions;
 export const googleActions = googleSlice.actions;
