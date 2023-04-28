@@ -24,7 +24,7 @@ function Location() {
     const navigation = useNavigation()
     const { address } = useSelector((state: RootState) => state.address);
 
-    const handleDispatch = () => { dispatch(setAddress({ formated_address: geocode && geocode[0]?.formatted_address, extra_data_address: addresData })), navigation.navigate("Home") }
+    const handleDispatch = () => { dispatch(setAddress({ ...address, formated_address: geocode && geocode[0]?.formatted_address, extra_data_address: addresData })), navigation.navigate("Home") }
 
     let permissionCheck = '';
     const handleLocationPermission = async () => {
@@ -87,21 +87,21 @@ function Location() {
         address && setLocation(address.geolocation)
     }, [address])
 
-    // useEffect(() => {
-    //     !location && Geolocation.getCurrentPosition(
-    //         position => {
-    //             const { latitude, longitude } = position.coords
-    //             setLocation({ lat: latitude, lng: longitude })
-    //         },
-    //         error => {
-    //             console.log(error.code, error.message)
-    //         },
-    //         { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    //     )
-    // }, [])
-
     useEffect(() => {
-        console.log("fetchadres")
+        !address.length && !location && Geolocation.getCurrentPosition(
+            position => {
+                const { latitude, longitude } = position.coords
+                setLocation({ lat: latitude, lng: longitude })
+            },
+            error => {
+                console.log(error.code, error.message)
+            },
+            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+        )
+    }, [])
+    console.log(address)
+    console.log(location)
+    useEffect(() => {
         location && dispatch(fetchAddress(location))
     }, [location])
 
@@ -126,7 +126,7 @@ function Location() {
                     <View style={styles.containerMap}>
                         <ContainerMapView lat={location.lat} lng={location.lng} />
                     </View>
-                    <ContainerAddressData handleOnChange={(text) => setAddresData(text)} />
+                    <ContainerAddressData handleOnChange={(text) => setAddresData(text)} preValue={address?.extra_data_address} />
                     <TouchableOpacity style={styles.buttonAdd} onPress={() => handleDispatch()}><ButtonText style={{ alignSelf: "center" }} >AGREGA DIRECCÍON</ButtonText>
                     </TouchableOpacity>
                 </View>

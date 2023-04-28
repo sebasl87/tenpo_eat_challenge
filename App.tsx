@@ -5,10 +5,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 
-import { Header, HeaderLocation, HeaderRestaurant } from './src/components/organisms';
+import { Header, HeaderLocation, HeaderLocationSearch, HeaderRestaurant } from './src/components/organisms';
 
 import { HomeScreen, Location, RestaurantDetail } from './src/components/screens';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 export interface IRestaurante {
   uri: any;
@@ -29,12 +29,8 @@ export type RootStackParamTenpo = {
   RestaurantDetail: { resto: IRestaurante };
 };
 
-function Location2() {
-  return (
-    <View style={{ backgroundColor: "orange" }}>
-      <Text >New User Screen</Text>
-    </View>
-  );
+function LocationView() {
+  return (<View></View>)
 }
 
 function App(): JSX.Element {
@@ -51,7 +47,7 @@ function App(): JSX.Element {
             <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
             />
             <Stack.Screen name="Location" component={Location} options={{ header: () => <HeaderLocation title="Agregar dirección de la entrega" /> }} />
-            <Stack.Screen name="LocationSearch" component={Location2} options={{ header: () => <HeaderLocation title="Esperando tu ubicación..." /> }} />
+            <Stack.Screen name="LocationSearch" component={LocationView} options={{ header: () => <HeaderLocationSearch title="Esperando tu ubicación..." /> }} />
             <Stack.Screen name="SearchRestaurant" component={HomeScreen} />
             <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} options={{ header: () => <HeaderRestaurant /> }} />
           </Stack.Group>

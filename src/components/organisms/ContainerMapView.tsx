@@ -9,7 +9,7 @@ export interface IGoogleMaps {
 }
 
 const ContainerMapView: React.FC<IGoogleMaps> = ({ lat, lng }) => {
-    console.log(lat, lng)
+
     return <MapView
         style={styles.mapStyle}
         provider={PROVIDER_GOOGLE}
