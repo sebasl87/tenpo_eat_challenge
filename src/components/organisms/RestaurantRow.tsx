@@ -3,9 +3,6 @@ import { View, ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 import { DiscountCircle, DetailCard, LogoRounded } from '../molecules'
 
-
-import { RestaurantsLayout } from '../atoms';
-
 export interface IRestaurant { }
 
 const Title = styled.Text`
@@ -50,7 +47,7 @@ const linksData = [
 ]
 
 const RestaurantRow: React.FC<IRestaurant> = () => (
-    <RestaurantsLayout>
+    <>
         <Title style={{ fontFamily: "Gotham-Bold" }}>RESTAURANTES</Title>
         <ScrollView horizontal={true}>
             <View style={{ flexDirection: "row" }}>
@@ -63,7 +60,7 @@ const RestaurantRow: React.FC<IRestaurant> = () => (
                 ))}
             </View >
         </ScrollView>
-    </RestaurantsLayout>
+    </>
 );
 
 

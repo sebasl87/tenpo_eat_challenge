@@ -27,7 +27,7 @@ function App(): JSX.Element {
   return (
     <Provider store={store}>
       <NavigationContainer theme={navTheme}>
-        <Stack.Navigator initialRouteName="Location">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Group>
             <Stack.Screen name="Home" component={HomeScreen} options={{ header: () => <Header /> }}
             />

@@ -10,10 +10,10 @@ export interface IAddresData {
 }
 
 const SubTitle = styled.Text`
-color: #333333;
-font-family: "Gotham-Book";
-font-size: 14px;
-margin-bottom:12px;
+    color: #333333;
+    font-family: "Gotham-Book";
+    font-size: 14px;
+    margin-bottom:12px;
 `
 
 const ContainerAddressData: React.FC<IAddresData> = ({ handleOnChange }) => {
