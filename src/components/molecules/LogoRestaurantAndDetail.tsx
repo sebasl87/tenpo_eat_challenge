@@ -3,14 +3,10 @@ import { ScrollView, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import { useNavigation } from '@react-navigation/native';
 
-export interface IRestaurant { }
-
 export interface IRestaurantsLayout {
     image?: any;
     bgColor?: string;
-    TextNameRestaurant?: string;
-    subtitle?: string;
-    detail?: string;
+    textNameRestaurant?: string;
 }
 
 const Container = styled.View<IRestaurantsLayout>`
@@ -67,7 +63,7 @@ const DetailRestaurant = styled.Text`
   margin-top: 8px;  
 `;
 
-const LogoRestaurantDetail: React.FC<IRestaurantsLayout> = ({ bgColor, image, TextNameRestaurant, subtitle, detail }) => {
+const LogoRestaurantAndDetail: React.FC<IRestaurantsLayout> = ({ bgColor, image, textNameRestaurant }) => {
     const navigation = useNavigation()
     return (
         <>
@@ -78,19 +74,19 @@ const LogoRestaurantDetail: React.FC<IRestaurantsLayout> = ({ bgColor, image, Te
                     >
                         <Container bgColor={bgColor}>
                             <Images
-                                source={image}
+                                source={{ uri: image }}
                             />
                         </Container>
                     </TouchableOpacity>
                 </ContainerCenter>
                 <ContainerCenter>
-                    <TitleRestaurant style={{ fontFamily: "Gotham-Bold" }}>{TextNameRestaurant}</TitleRestaurant>
+                    <TitleRestaurant style={{ fontFamily: "Gotham-Bold" }}>{textNameRestaurant}</TitleRestaurant>
                 </ContainerCenter>
                 <ContainerCenter>
-                    <SubTitleRestaurant style={{ fontFamily: "Gotham-Book" }}>{subtitle}</SubTitleRestaurant>
+                    <SubTitleRestaurant style={{ fontFamily: "Gotham-Book" }}>Pizzeria - Snacks</SubTitleRestaurant>
                 </ContainerCenter>
                 <ContainerDetail>
-                    <DetailRestaurant style={{ fontFamily: "Gotham-Book" }}>{detail}</DetailRestaurant>
+                    <DetailRestaurant style={{ fontFamily: "Gotham-Book" }}>Detalle de restaurante</DetailRestaurant>
                 </ContainerDetail>
             </ScrollView>
         </>
@@ -98,4 +94,4 @@ const LogoRestaurantDetail: React.FC<IRestaurantsLayout> = ({ bgColor, image, Te
 };
 
 
-export default LogoRestaurantDetail;
+export default LogoRestaurantAndDetail;

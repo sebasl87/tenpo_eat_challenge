@@ -1,11 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import { useNavigation } from '@react-navigation/native';
 import { Image, Text, View } from 'react-native';
 import { styles } from '../../styles/styles';
-import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../store';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { REACT_APP_GOOGLE_GEOCODE_KEY } from '@env';
-import { useNavigation } from '@react-navigation/native';
 import { setAddress } from '../../store/addressSlice';
 import { Location } from '../../store/googleSlice';
 export interface IHeader {

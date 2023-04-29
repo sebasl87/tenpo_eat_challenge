@@ -7,5 +7,5 @@ export { default as HeaderLocation } from "./HeaderLocation";
 export { default as HeaderLocationSearch } from "./HeaderLocationSearch";
 export { default as HeaderRestaurant } from "./HeaderRestaurant";
 export { default as HomeLocation } from './HomeLocation';
+export { default as Restaurant } from './Restaurant';
 export { default as RestaurantRow } from "./RestaurantRow";
-export { default as Restaurants } from './Restaurants';

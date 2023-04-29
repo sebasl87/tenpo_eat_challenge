@@ -1,4 +1,5 @@
 import React from 'react'
+
 import styled from 'styled-components/native';
 
 export interface ILogoRounded {
@@ -18,6 +19,8 @@ const Container = styled.View<ILogoRounded>`
 `
 
 const Images = styled.Image`
+    width: 100%;
+    height: 100%;
     max-width: 104px;
 `
 
@@ -25,7 +28,8 @@ const LogoRounded: React.FC<ILogoRounded> = ({ image, bgColor }) => {
     return (
         <Container bgColor={bgColor}>
             <Images
-                source={image}
+                source={{ uri: image }}
+
             />
         </Container>
     )

@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, ScrollView } from 'react-native';
-import { RestaurantRow, CategoriesRow, FavoritesRow, HomeLocation } from '../organisms'
-import { RestaurantsLayout } from '../atoms';
 import { useSelector } from 'react-redux';
+import { RestaurantsLayout } from '../atoms';
+import { RestaurantRow, CategoriesRow, FavoritesRow, HomeLocation } from '../organisms'
 import { RootState } from '../../store';
+import useRestaurants from '../../hooks/useRestaurants';
 
 
 function HomeScreen() {
     const { address } = useSelector((state: RootState) => state.address);
+
+    const { getRestos, restoList } = useRestaurants()
+
+    useEffect(() => { getRestos() }, [])
 
     return (
         <>
@@ -15,7 +20,7 @@ function HomeScreen() {
             <RestaurantsLayout>
                 <ScrollView>
                     <View>
-                        <RestaurantRow />
+                        <RestaurantRow restoList={restoList} />
                     </View>
                     <View style={{ marginTop: 20 }}>
                         <CategoriesRow />

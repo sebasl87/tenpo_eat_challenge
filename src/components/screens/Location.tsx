@@ -4,6 +4,7 @@ import { Image, Modal, Platform, Text, TouchableOpacity, View } from 'react-nati
 import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 import Geolocation from "react-native-geolocation-service"
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigation } from '@react-navigation/native';
 
 import { AppDispatch, RootState } from '../../store';
 import { fetchAddress } from '../../store/googleSlice';
@@ -14,7 +15,6 @@ import { IGoogleMaps } from '../organisms/ContainerMapView';
 import styled from 'styled-components/native';
 import { styles } from '../../styles/styles';
 import { setAddress } from '../../store/addressSlice';
-import { useNavigation } from '@react-navigation/native';
 
 function Location() {
     const [location, setLocation] = useState<IGoogleMaps>()
