@@ -3,5 +3,6 @@
   "compilerOptions": {
     "jsx": "react",
     "types": ["jest", "@types/styled-components-react-native"]
-  }
+  },
+  "allowSyntheticDefaultImports": true
 }
