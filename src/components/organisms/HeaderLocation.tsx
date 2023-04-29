@@ -1,20 +1,18 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
+import { useRoute } from '@react-navigation/native';
 import { Image, Text, TextInput, View } from 'react-native';
 import { styles } from '../../styles/styles';
-import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
 
-import { useRoute } from '@react-navigation/native';
-
-import { Location, clearGeocode } from '../../store/googleSlice';
+import { Location } from '../../store/googleSlice';
 export interface IHeader {
     title: string
 }
 export interface IHandleDispatch { address: string, coordinates?: Location }
 
 const Header: React.FC<IHeader> = ({ title }) => {
-    const { geocode } = useSelector((state: RootState) => state.google);
-    const { address } = useSelector((state: RootState) => state.address);
+    const { google: { geocode }, address: { address } } = useSelector((state: RootState) => state);
 
     const route = useRoute();
 

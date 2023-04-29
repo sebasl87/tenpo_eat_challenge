@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import { googleSlice } from './googleSlice';
 import { addressSlice } from './addressSlice';
+import { restaurantsSlice } from './restaurantsSlice';
 
 export const store = configureStore({
   reducer: {
     google: googleSlice.reducer,
-    address: addressSlice.reducer
+    address: addressSlice.reducer,
+    restaurants: restaurantsSlice.reducer
   },
 });
 

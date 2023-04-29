@@ -1,21 +1,20 @@
 import React from 'react'
 import { ScrollView } from 'react-native';
-import { Restaurants } from '../organisms'
+import { Restaurant } from '../organisms'
 import { RestaurantsLayout } from '../atoms';
-import { useRoute } from '@react-navigation/native';
+import { RouteProp, useRoute } from '@react-navigation/native';
+import { IRestaurante } from '../../../App';
 
 function RestaurantDetail() {
-    const route = useRoute()
-    const { resto } = route.params;
+    const route: RouteProp<{ params: { resto: IRestaurante } }, 'params'> = useRoute()
+    const { resto } = route.params
 
     return (
-        <>
-            <RestaurantsLayout>
-                <ScrollView>
-                    <Restaurants />
-                </ScrollView>
-            </RestaurantsLayout>
-        </>
+        <RestaurantsLayout>
+            <ScrollView>
+                <Restaurant resto={resto} />
+            </ScrollView>
+        </RestaurantsLayout>
     );
 }
 

@@ -11,13 +11,14 @@ import { HomeScreen, Location, RestaurantDetail } from './src/components/screens
 import { View } from 'react-native';
 
 export interface IRestaurante {
-  uri: any;
-  id: number;
-  discount: string;
-  restaurantName: string;
-  rate: string;
-  lapseTime: string;
   bgColor: string;
+  discount: string;
+  id: number;
+  lapseTime: string;
+  rate: string;
+  restaurantName: string;
+  uri_large: any;
+  uri: any;
 }
 
 

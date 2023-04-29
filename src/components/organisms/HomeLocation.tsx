@@ -1,8 +1,8 @@
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 import styled from 'styled-components/native';
 import { AddressLayout } from '../atoms';
 import { View, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import { IAddress } from '../../store/addressSlice';
 
 const InputText = styled.Text`

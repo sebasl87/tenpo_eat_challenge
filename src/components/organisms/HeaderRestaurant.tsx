@@ -1,8 +1,10 @@
 import React from "react";
-import styled from 'styled-components/native';
-import { View, Image, TouchableHighlight } from 'react-native';
-import { styles } from '../../styles/styles';
+import { useSelector } from "react-redux";
 import { useNavigation } from '@react-navigation/native';
+import { View, Image, TouchableHighlight } from 'react-native';
+import styled from 'styled-components/native';
+import { styles } from '../../styles/styles';
+import { RootState } from "../../store";
 
 const Container = styled.View`
     background: #D4F9F5;
@@ -37,6 +39,8 @@ const TextAdress = styled.Text`
 
 const HeaderRestaurant = () => {
     const navigation = useNavigation()
+    const { google: { geocode }, address: { address } } = useSelector((state: RootState) => state);
+
     return (
         <>
             <Container>
@@ -56,7 +60,7 @@ const HeaderRestaurant = () => {
                     </TouchableHighlight>
                     <ContainerText>
                         <TextTitle style={{ fontFamily: "Gotham-Bold" }}>Tu ubicación cercana</TextTitle>
-                        <TextAdress style={{ fontFamily: "Gotham-Light" }} numberOfLines={1}>Calle Agustina 546</TextAdress>
+                        <TextAdress style={{ fontFamily: "Gotham-Light" }} numberOfLines={1}>{address.length ? address.formated_address : geocode && geocode[0]?.formatted_address}</TextAdress>
                     </ContainerText>
                 </ContainerBack>
                 <View>

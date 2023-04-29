@@ -57,13 +57,13 @@ function Header() {
                 <View style={{ flexDirection: "row", marginBottom: -16 }}>
                     <Animated.View style={[stylesB.star1, { opacity: fadeAnim }, spinStyle]}>
                         <Image
-                            source={require("../../../assets/imgs/starCross.png")}
+                            source={require("../../../assets/icons/starCross.png")}
                             style={{ width: 12, height: 12 }}
                         />
                     </Animated.View>
                     <Animated.View style={[stylesB.star2, { opacity: fadeAnim }]}>
                         <Image
-                            source={require("../../../assets/imgs/starCross.png")}
+                            source={require("../../../assets/icons/starCross.png")}
                             style={{ width: 12, height: 12 }}
                         />
                     </Animated.View>
@@ -73,13 +73,13 @@ function Header() {
                     />
                     <Animated.View style={[stylesB.star3, { opacity: fadeAnim }, spinStyle]}>
                         <Image
-                            source={require("../../../assets/imgs/starCross.png")}
+                            source={require("../../../assets/icons/starCross.png")}
                             style={{ width: 12, height: 12 }}
                         />
                     </Animated.View>
                     <Animated.View style={[stylesB.star4, { opacity: fadeAnim }, spinStyle]}>
                         <Image
-                            source={require("../../../assets/imgs/starCross.png")}
+                            source={require("../../../assets/icons/starCross.png")}
                             style={{ width: 12, height: 12 }}
                         />
                     </Animated.View>
