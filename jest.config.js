@@ -5,13 +5,9 @@ module.exports = {
   preset: 'react-native',
   transform: {
     ...tsjPreset.transform,
+    '^.+\\.(js)$': '<rootDir>/node_modules/babel-jest',
+    '\\.(ts|tsx)$': '<rootDir>/node_modules/ts-jest',
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: './tsconfig.json' }],
   },
-  globals: {
-    'ts-jest': {
-      babelConfig: true,
-    },
-  },
-  // This is the only part which you can keep
-  // from the above linked tutorial's config:
   cacheDirectory: '.jest/cache',
 };

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DiscountCircle component should render successfully with DiscountCircle 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#00BAA4",
+        "height": 30,
+        "justifyContent": "center",
+        "marginLeft": 78,
+        "marginTop": 2,
+        "position": "absolute",
+        "width": 30,
+        "zIndex": 2,
+      },
+      {
+        "borderRadius": 50,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#fff",
+          "fontSize": 11,
+        },
+        {
+          "fontFamily": "Roboto-Light",
+        },
+      ]
+    }
+  >
+    DiscountCircle_mock
+    %
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "#fff",
+          "fontSize": 7,
+          "marginTop": -2,
+        },
+        {
+          "fontFamily": "Roboto-Light",
+        },
+      ]
+    }
+  >
+    DCTO
+  </Text>
+</View>
+`;

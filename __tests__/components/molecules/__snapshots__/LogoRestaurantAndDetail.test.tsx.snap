@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoRestaurantAndDetail component should render successfully with LogoRestaurantAndDetail 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        [
+          {
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "minWidth": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          bgColor="#000"
+          style={
+            [
+              {
+                "alignItems": "center",
+                "backgroundColor": "#000",
+                "borderRadius": 16,
+                "display": "flex",
+                "height": 148,
+                "justifyContent": "center",
+                "marginTop": 10,
+                "overflow": "hidden",
+                "width": 148,
+              },
+            ]
+          }
+        >
+          <Image
+            source={
+              {
+                "uri": undefined,
+              }
+            }
+            style={
+              [
+                {
+                  "height": 148,
+                  "width": 148,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "minWidth": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#333333",
+              "fontSize": 22,
+              "marginTop": 8,
+            },
+            {
+              "fontFamily": "Gotham-Bold",
+            },
+          ]
+        }
+      >
+        LogoRestaurantAndDetail_mock
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "minWidth": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#adadad",
+              "fontSize": 12,
+              "marginTop": 8,
+            },
+            {
+              "fontFamily": "Gotham-Book",
+            },
+          ]
+        }
+      >
+        Pizzeria - Snacks
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 200,
+            "minWidth": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "color": "#adadad",
+              "fontSize": 20,
+              "marginTop": 8,
+            },
+            {
+              "fontFamily": "Gotham-Book",
+            },
+          ]
+        }
+      >
+        Detalle de restaurante
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoriesLayout component should render successfully with CategoriesLayout 1`] = `
+<View
+  style={
+    [
+      {
+        "alignContent": "center",
+        "alignItems": "center",
+        "display": "flex",
+        "height": 90,
+        "width": 168,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#fff",
+          "fontSize": 16,
+          "letterSpacing": 1,
+          "marginTop": 30,
+          "position": "absolute",
+          "zIndex": 2,
+        },
+        {
+          "fontFamily": "Gotham-Bold",
+        },
+      ]
+    }
+  >
+    AddressLayout_mock
+  </Text>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      [
+        {
+          "height": 80,
+          "width": 174,
+        },
+      ]
+    }
+  >
+    <Image
+      style={
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          {
+            "height": 80,
+            "width": 174,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;

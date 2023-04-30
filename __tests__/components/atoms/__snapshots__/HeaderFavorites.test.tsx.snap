@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderFavorites component should render successfully with HeaderFavorites 1`] = `
+<View
+  style={
+    [
+      {
+        "display": "flex",
+        "height": 102,
+        "width": 260,
+      },
+    ]
+  }
+>
+  <Image
+    style={
+      [
+        {
+          "height": 44,
+          "marginLeft": 11,
+          "marginTop": 9,
+          "position": "absolute",
+          "width": 44,
+          "zIndex": 1,
+        },
+      ]
+    }
+  />
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      [
+        {
+          "height": 102,
+          "width": 260,
+        },
+      ]
+    }
+  >
+    <Image
+      style={
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          {
+            "height": 102,
+            "width": 260,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+</View>
+`;
