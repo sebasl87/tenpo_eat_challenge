@@ -11,7 +11,7 @@ export const fetchRestos = createAsyncThunk(
   }
 );
 
-const initialRestosState = {
+export const initialRestosState = {
   restoList: [] as IRestaurante[],
   loading: false,
 };

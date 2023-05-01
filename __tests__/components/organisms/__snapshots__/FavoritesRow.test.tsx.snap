@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesRow component should render successfully with mock 1`] = `
+[
+  <Text
+    style={
+      [
+        {
+          "color": "#333333",
+          "fontSize": 18,
+          "marginBottom": 6,
+        },
+        {
+          "fontFamily": "Gotham-Bold",
+        },
+      ]
+    }
+  >
+    TUS FAVORITOS
+  </Text>,
+  <RCTScrollView
+    horizontal={true}
+  >
+    <View>
+      <View
+        style={
+          {
+            "flexDirection": "row",
+            "marginBottom": 80,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "marginRight": 12,
+            }
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "display": "flex",
+                  "height": 102,
+                  "width": 260,
+                },
+              ]
+            }
+          >
+            <Image
+              source={
+                {
+                  "testUri": "../../../assets/imgs/mc.png",
+                }
+              }
+              style={
+                [
+                  {
+                    "height": 44,
+                    "marginLeft": 11,
+                    "marginTop": 9,
+                    "position": "absolute",
+                    "width": 44,
+                    "zIndex": 1,
+                  },
+                ]
+              }
+            />
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                [
+                  {
+                    "height": 102,
+                    "width": 260,
+                  },
+                ]
+              }
+            >
+              <Image
+                source={
+                  {
+                    "testUri": "../../../assets/imgs/mcBack.png",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    {
+                      "height": 102,
+                      "width": 260,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "borderBottomLeftRadius": 16,
+                  "borderBottomRightRadius": 16,
+                  "borderColor": "#EDEDED",
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "display": "flex",
+                  "maxWidth": 260,
+                  "paddingBottom": 8,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "paddingTop": 8,
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 3,
+                    "maxWidth": 260,
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#333333",
+                      "fontSize": 13,
+                    },
+                    {
+                      "fontFamily": "Gotham-Medium",
+                    },
+                  ]
+                }
+              >
+                Combo hamburguesa Bigmac
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "flexDirection": "row",
+                    },
+                  ]
+                }
+              >
+                <Image
+                  source={
+                    {
+                      "testUri": "../../../assets/imgs/starmini.png",
+                    }
+                  }
+                  style={
+                    [
+                      {
+                        "height": 16,
+                        "marginRight": 2,
+                        "width": 16,
+                      },
+                    ]
+                  }
+                />
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#333333",
+                        "fontSize": 12,
+                      },
+                      {
+                        "fontFamily": "Gotham-Medium",
+                      },
+                    ]
+                  }
+                >
+                  3.5
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "maxWidth": 260,
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#00baa4",
+                      "fontSize": 13,
+                    },
+                    {
+                      "fontFamily": "Gotham-Bold",
+                    },
+                  ]
+                }
+              >
+                Mcdonalds
+              </Text>
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#333333",
+                        "fontSize": 12,
+                      },
+                      {
+                        "fontFamily": "Gotham-Medium",
+                      },
+                    ]
+                  }
+                >
+                  10-50
+                   min
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "marginRight": 12,
+            }
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "display": "flex",
+                  "height": 102,
+                  "width": 260,
+                },
+              ]
+            }
+          >
+            <Image
+              source={
+                {
+                  "testUri": "../../../assets/imgs/melt.png",
+                }
+              }
+              style={
+                [
+                  {
+                    "height": 44,
+                    "marginLeft": 11,
+                    "marginTop": 9,
+                    "position": "absolute",
+                    "width": 44,
+                    "zIndex": 1,
+                  },
+                ]
+              }
+            />
+            <View
+              accessibilityIgnoresInvertColors={true}
+              style={
+                [
+                  {
+                    "height": 102,
+                    "width": 260,
+                  },
+                ]
+              }
+            >
+              <Image
+                source={
+                  {
+                    "testUri": "../../../assets/imgs/meltBack.png",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                    {
+                      "height": 102,
+                      "width": 260,
+                    },
+                    undefined,
+                  ]
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              [
+                {
+                  "borderBottomLeftRadius": 16,
+                  "borderBottomRightRadius": 16,
+                  "borderColor": "#EDEDED",
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "display": "flex",
+                  "maxWidth": 260,
+                  "paddingBottom": 8,
+                  "paddingLeft": 8,
+                  "paddingRight": 8,
+                  "paddingTop": 8,
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "marginBottom": 3,
+                    "maxWidth": 260,
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#333333",
+                      "fontSize": 13,
+                    },
+                    {
+                      "fontFamily": "Gotham-Medium",
+                    },
+                  ]
+                }
+              >
+                Pizza Mediana 3 ingredientes
+              </Text>
+              <View
+                style={
+                  [
+                    {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "flexDirection": "row",
+                    },
+                  ]
+                }
+              >
+                <Image
+                  source={
+                    {
+                      "testUri": "../../../assets/imgs/starmini.png",
+                    }
+                  }
+                  style={
+                    [
+                      {
+                        "height": 16,
+                        "marginRight": 2,
+                        "width": 16,
+                      },
+                    ]
+                  }
+                />
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#333333",
+                        "fontSize": 12,
+                      },
+                      {
+                        "fontFamily": "Gotham-Medium",
+                      },
+                    ]
+                  }
+                >
+                  4.5
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "maxWidth": 260,
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#00baa4",
+                      "fontSize": 13,
+                    },
+                    {
+                      "fontFamily": "Gotham-Bold",
+                    },
+                  ]
+                }
+              >
+                MELT pizzas
+              </Text>
+              <View>
+                <Text
+                  style={
+                    [
+                      {
+                        "color": "#333333",
+                        "fontSize": 12,
+                      },
+                      {
+                        "fontFamily": "Gotham-Medium",
+                      },
+                    ]
+                  }
+                >
+                  10-60
+                   min
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;

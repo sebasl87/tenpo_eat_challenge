@@ -11,6 +11,7 @@ export interface IGoogleMaps {
 const ContainerMapView: React.FC<IGoogleMaps> = ({ lat, lng }) => {
 
     return <MapView
+        testID="map"
         style={styles.mapStyle}
         provider={PROVIDER_GOOGLE}
         initialRegion={{

@@ -6,6 +6,7 @@ import { HeaderLocationSearch } from "../../../src/components/organisms";
 
 jest.mock("react-redux", () => ({
     ...jest.requireActual("react-redux"),
+    useDispatch: jest.fn(),
     useSelector: jest.fn()
         .mockReturnValueOnce({
             google: { geocode: [], loading: false }, address: { address: { formated_address: "Some mock street, Santiago, Chile" } }, restaurants: {
@@ -23,8 +24,7 @@ jest.mock("react-redux", () => ({
                 ],
                 loading: false
             }
-        }
-        )
+        }),
 }));
 
 describe("HeaderLocationSearch component", () => {

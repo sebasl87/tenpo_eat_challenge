@@ -1,5 +1,18 @@
 import { jest } from '@jest/globals';
 
+const mockDispatch = jest.fn();
+jest.mock('react-redux', () => ({
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => mockDispatch,
+  useSelector: jest.fn(() => ({
+    google: {
+      loading: false,
+      geocode: [],
+    },
+    address: { formated_address: 'some mock address' },
+  })),
+}));
+
 jest.mock('react-native-maps', () => {
   const React = require('react');
   const { View } = require('react-native');

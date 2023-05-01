@@ -15,4 +15,12 @@ module.exports = {
   transformIgnorePatterns: [
     'node_modules/(?!(jest-)?react-native-permissions|)',
   ],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/index.js',
+    '!src/index.ts',
+    '!<rootDir>/node_modules/',
+    '!src/store/*.{ts,tsx}',
+    '!src/types/*.{ts,tsx}',
+  ],
 };
