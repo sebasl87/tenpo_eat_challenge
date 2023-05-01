@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import {
   REACT_APP_GOOGLE_GEOCODE_URL,
   REACT_APP_GOOGLE_GEOCODE_KEY,
-} from '@env';
+} from 'dotenv';
 
 export interface Geocode {
   address_components: AddressComponent[];

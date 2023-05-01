@@ -12,4 +12,7 @@ module.exports = {
     '^.+\\.tsx?$': ['ts-jest', { tsconfig: './tsconfig.json' }],
   },
   cacheDirectory: '.jest/cache',
+  transformIgnorePatterns: [
+    'node_modules/(?!(jest-)?react-native-permissions|)',
+  ],
 };

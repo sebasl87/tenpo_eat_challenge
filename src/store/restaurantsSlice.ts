@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { REACT_APP_BASE_API } from '@env';
+import { REACT_APP_BASE_API } from 'dotenv';
 
 import { IRestaurante } from '../../App';
 
