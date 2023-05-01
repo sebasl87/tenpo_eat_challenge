@@ -42,3 +42,15 @@ jest.mock('react-native-permissions', () =>
 );
 
 jest.mock('react-native-google-places-autocomplete', () => {});
+
+const mockedNavigate = jest.fn();
+
+jest.mock('@react-navigation/native', () => {
+  const actualNav = jest.requireActual('@react-navigation/native');
+  return {
+    ...actualNav,
+    useNavigation: () => ({
+      navigate: mockedNavigate,
+    }),
+  };
+});

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeLocation component should render successfully with HomeLocation_mock 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#D4F9F5",
+        "borderTopLeftRadius": 28,
+        "borderTopRightRadius": 28,
+        "paddingBottom": 18,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/icons/location.png",
+          }
+        }
+        style={
+          {
+            "height": 18,
+            "marginRight": 6,
+            "paddingTop": 30,
+            "width": 24,
+          }
+        }
+      />
+      <Text
+        numberOfLines={1}
+        style={
+          [
+            {
+              "color": "#008f7e",
+              "fontSize": 16,
+              "marginLeft": 8,
+              "maxWidth": 300,
+            },
+            {
+              "fontFamily": "Gotham-Light",
+            },
+          ]
+        }
+      >
+        Some mock street, Santiago, Chile
+      </Text>
+    </View>
+  </View>
+</View>
+`;
