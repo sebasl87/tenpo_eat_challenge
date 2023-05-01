@@ -6,10 +6,10 @@ import LogoRounded from "../../../src/components/molecules/LogoRounded";
 
 describe("LogoRounded component", () => {
     it("should render successfully with LogoRounded", () => {
-        const titleSection = renderer
+        const logoRounded = renderer
             .create(<LogoRounded bgColor="#000" />)
             .toJSON();
 
-        expect(titleSection).toMatchSnapshot();
+        expect(logoRounded).toMatchSnapshot();
     });
 });

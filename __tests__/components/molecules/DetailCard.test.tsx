@@ -6,10 +6,10 @@ import DetailCard from "../../../src/components/molecules/DetailCard";
 
 describe("DetailCard component", () => {
     it("should render successfully with DetailCard", () => {
-        const titleSection = renderer
+        const detailCard = renderer
             .create(<DetailCard rate="DetailCard_mock" lapseTime="DetailCard_mock" />)
             .toJSON();
 
-        expect(titleSection).toMatchSnapshot();
+        expect(detailCard).toMatchSnapshot();
     });
 });

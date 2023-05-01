@@ -2,8 +2,10 @@ import "react-native";
 import React from "react";
 import renderer from "react-test-renderer";
 import LogoRestaurantAndDetail from "../../../src/components/molecules/LogoRestaurantAndDetail";
+import { render, screen, fireEvent } from '@testing-library/react-native';
 
 const mockedNavigate = jest.fn();
+const onPressMock = jest.fn();
 
 jest.mock('@react-navigation/native', () => {
     const actualNav = jest.requireActual('@react-navigation/native');
@@ -18,10 +20,18 @@ jest.mock('@react-navigation/native', () => {
 
 describe("LogoRestaurantAndDetail component", () => {
     it("should render successfully with LogoRestaurantAndDetail", () => {
-        const titleSection = renderer
+        const logoRestaurantAndDetail = renderer
             .create(<LogoRestaurantAndDetail textNameRestaurant="LogoRestaurantAndDetail_mock" bgColor="#000" />)
             .toJSON();
 
-        expect(titleSection).toMatchSnapshot();
+        expect(logoRestaurantAndDetail).toMatchSnapshot();
+    });
+
+    it("should click On Press", () => {
+        render(
+            <LogoRestaurantAndDetail textNameRestaurant="LogoRestaurantAndDetail" bgColor="#000" />
+        );
+        fireEvent.press(screen.getByTestId('clickMe'));
+        expect(onPressMock).toBeCalled;
     });
 });

@@ -49,6 +49,7 @@ exports[`LogoRestaurantAndDetail component should render successfully with LogoR
             "opacity": 1,
           }
         }
+        testID="clickMe"
       >
         <View
           bgColor="#000"

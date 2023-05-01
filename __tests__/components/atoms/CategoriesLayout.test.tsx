@@ -6,10 +6,10 @@ import CategoriesLayout from "../../../src/components/atoms/CategoriesLayout";
 
 describe("CategoriesLayout component", () => {
     it("should render successfully with CategoriesLayout", () => {
-        const titleSection = renderer
+        const categoriesLayout = renderer
             .create(<CategoriesLayout children="AddressLayout_mock" />)
             .toJSON();
 
-        expect(titleSection).toMatchSnapshot();
+        expect(categoriesLayout).toMatchSnapshot();
     });
 });

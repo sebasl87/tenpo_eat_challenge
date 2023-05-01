@@ -6,10 +6,10 @@ import DetailFavorites from "../../../src/components/molecules/DetailFavorites";
 
 describe("DetailFavorites component", () => {
     it("should render successfully with DetailFavorites", () => {
-        const titleSection = renderer
+        const detailFavorites = renderer
             .create(<DetailFavorites favoriteFood="DetailFavorites_mock" rate="DetailFavorites_mock" restaurantName="DetailFavorites_mock" lapseTime="DetailFavorites_mock" />)
             .toJSON();
 
-        expect(titleSection).toMatchSnapshot();
+        expect(detailFavorites).toMatchSnapshot();
     });
 });

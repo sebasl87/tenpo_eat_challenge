@@ -6,10 +6,10 @@ import DiscountCircle from "../../../src/components/molecules/DiscountCircle";
 
 describe("DiscountCircle component", () => {
     it("should render successfully with DiscountCircle", () => {
-        const titleSection = renderer
+        const discountCircle = renderer
             .create(<DiscountCircle discount="DiscountCircle_mock" />)
             .toJSON();
 
-        expect(titleSection).toMatchSnapshot();
+        expect(discountCircle).toMatchSnapshot();
     });
 });
