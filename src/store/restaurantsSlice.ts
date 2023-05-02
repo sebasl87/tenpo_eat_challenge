@@ -7,6 +7,7 @@ export const fetchRestos = createAsyncThunk(
   'restaurants/fetchRestos',
   async () => {
     const response = await fetch(`${REACT_APP_BASE_API}restaurants`);
+    JSON.stringify(response);
     return await response.json();
   }
 );

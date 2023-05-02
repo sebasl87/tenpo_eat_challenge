@@ -67,11 +67,7 @@ const initialGoogleState = {
 export const googleSlice = createSlice({
   name: 'google',
   initialState: initialGoogleState,
-  reducers: {
-    clearGeocode(state) {
-      state = initialGoogleState;
-    },
-  },
+  reducers: {},
   extraReducers: builder => {
     builder.addCase(fetchAddress.pending, state => {
       state.loading = true;
@@ -86,5 +82,4 @@ export const googleSlice = createSlice({
   },
 });
 
-export const { clearGeocode } = googleSlice.actions;
 export const googleActions = googleSlice.actions;

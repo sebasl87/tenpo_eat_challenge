@@ -43,7 +43,6 @@ const Header: React.FC<IHeader> = ({ title }) => {
                 listViewDisplayed='auto'
                 fetchDetails={true}
                 renderDescription={row => row.description}
-
                 onPress={(data, details = null) => {
                     handleDispatch({ address: data?.description, coordinates: details?.geometry.location })
                 }}
