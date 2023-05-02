@@ -4,7 +4,6 @@ import { styles } from '../../styles/styles';
 
 function Header() {
     const animation = new Animated.Value(0)
-    // const fade = new Animated.Value(0)
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const rotateAnim = useRef(new Animated.Value(0)).current;
 

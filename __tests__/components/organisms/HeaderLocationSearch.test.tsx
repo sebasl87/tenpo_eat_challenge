@@ -3,6 +3,9 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 import { HeaderLocationSearch } from "../../../src/components/organisms";
+// import { render, screen, fireEvent } from '@testing-library/react-native';
+
+const onPressMock = jest.fn();
 
 jest.mock("react-redux", () => ({
     ...jest.requireActual("react-redux"),
@@ -35,4 +38,12 @@ describe("HeaderLocationSearch component", () => {
 
         expect(headerLocationSearchSection).toMatchSnapshot();
     });
+
+    // it("should click On Press", () => {
+    //     render(
+    //         <HeaderLocationSearch title="Mock to test title"/>
+    //     );
+    //     fireEvent.press(screen.getByTestId('clickMeLocation'));
+    //     expect(onPressMock).toBeCalled;
+    // });
 });

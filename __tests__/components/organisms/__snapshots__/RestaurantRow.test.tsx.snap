@@ -62,6 +62,7 @@ exports[`RestaurantRow component should render successfully with RestaurantRow_m
               "opacity": 1,
             }
           }
+          testID="clickMeRestaurantRow"
         >
           <View
             style={
@@ -298,6 +299,7 @@ exports[`RestaurantRow component should render successfully with RestaurantRow_m
               "opacity": 1,
             }
           }
+          testID="clickMeRestaurantRow"
         >
           <View
             style={

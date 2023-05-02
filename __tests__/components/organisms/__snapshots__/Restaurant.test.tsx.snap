@@ -201,20 +201,3 @@ exports[`Restaurant component should render successfully with Restaurant_mock 1`
   </View>
 </RCTScrollView>
 `;
-
-exports[`Title component should render successfully with title_mock 1`] = `
-<Text
-  style={
-    [
-      {
-        "color": "#333333",
-        "fontFamily": "Gotham-Bold",
-        "fontSize": 18,
-        "marginBottom": 6,
-      },
-    ]
-  }
->
-  title_mock
-</Text>
-`;

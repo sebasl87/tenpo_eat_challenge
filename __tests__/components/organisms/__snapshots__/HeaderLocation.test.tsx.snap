@@ -2,7 +2,14 @@
 
 exports[`HeaderLocation component should render successfully with mock 1`] = `
 <View
-  style={false}
+  style={
+    {
+      "height": 1200,
+      "position": "absolute",
+      "width": "100%",
+      "zIndex": 100,
+    }
+  }
 >
   <View
     style={
