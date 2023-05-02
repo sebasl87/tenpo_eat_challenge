@@ -35,7 +35,7 @@ const Header: React.FC<IHeader> = ({ title }) => {
                 </View>
             </View>
 
-            <TextInput clearButtonMode="always" placeholder='Escribe tu dirección' defaultValue={address.length ? address.formated_address : geocode && geocode[0]?.formatted_address} style={{ ...styles.fontTitle, ...styles.inputLocation, fontSize: 16 }} />
+            <TextInput clearButtonMode="always" placeholder='Escribe tu dirección' defaultValue={address?.length ? address.formated_address : geocode && geocode[0]?.formatted_address} style={{ ...styles.fontTitle, ...styles.inputLocation, fontSize: 16 }} />
         </View>
     );
 }

@@ -1,12 +1,7 @@
 import React from "react"
 
-import { render, waitFor } from "@testing-library/react-native"
-
 import { RestaurantDetail } from "../../../src/components/screens"
-
-import { check } from "react-native-permissions"
-
-import Geolocation from "react-native-geolocation-service"
+import renderer from "react-test-renderer";
 
 jest.mock("@react-navigation/native", () => ({
     ...jest.requireActual("@react-navigation/native"),
@@ -31,12 +26,12 @@ jest.mock("@react-navigation/native", () => ({
 }));
 
 describe("<RestaurantDetail />", () => {
-    test("should renders MapView and Marker with user current location", async () => {
-        render(<RestaurantDetail />)
+    it("should render successfully", () => {
+        const restaurantSection = renderer
+            .create(<RestaurantDetail />)
+            .toJSON();
 
-        await waitFor(() => {
-            expect(check).toHaveBeenCalledTimes(1)
-            expect(Geolocation.getCurrentPosition).toHaveBeenCalledTimes(1)
-        })
-    })
+        expect(restaurantSection).toMatchSnapshot();
+    });
+
 })

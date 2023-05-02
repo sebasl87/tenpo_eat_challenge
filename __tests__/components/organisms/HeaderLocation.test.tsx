@@ -35,7 +35,7 @@ describe("HeaderLocation component", () => {
             ...jest.requireActual("react-redux"),
             useSelector: jest.fn()
                 .mockReturnValueOnce({
-                    google: { geocode: [], loading: false }, address: { address: { formated_address: "Some mock street, Santiago, Chile" } }, restaurants: {
+                    google: { geocode: [], loading: false }, address: { address: { formated_address: "Some mock street, Santiago, Chile", length: 0 } }, restaurants: {
 
                         loading: false
                     }

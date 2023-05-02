@@ -22,7 +22,7 @@ const HomeLocation: React.FC<{ address: IAddress }> = ({ address }) => {
                         source={require("../../../assets/icons/location.png")}
                         style={{ height: 18, width: 24, marginRight: 6, paddingTop: 30 }}
                     />
-                    <InputText numberOfLines={1} style={{ fontFamily: 'Gotham-Light' }}>{address.formated_address || "Agregar dirección de la entrega"}</InputText>
+                    <InputText numberOfLines={1} style={{ fontFamily: 'Gotham-Light' }}>{address?.formated_address || "Agregar dirección de la entrega"}</InputText>
                 </View>
             </TouchableOpacity>
         </AddressLayout >

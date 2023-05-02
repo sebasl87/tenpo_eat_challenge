@@ -3,7 +3,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 import { HeaderLocationSearch } from "../../../src/components/organisms";
-// import { render, screen, fireEvent } from '@testing-library/react-native';
 
 const onPressMock = jest.fn();
 

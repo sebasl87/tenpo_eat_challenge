@@ -1,0 +1,896 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeScreen /> should render successfully with Restaurant_mock 1`] = `
+[
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "#D4F9F5",
+          "borderTopLeftRadius": 28,
+          "borderTopRightRadius": 28,
+          "paddingBottom": 18,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 20,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Image
+          source={
+            {
+              "testUri": "../../../assets/icons/location.png",
+            }
+          }
+          style={
+            {
+              "height": 18,
+              "marginRight": 6,
+              "paddingTop": 30,
+              "width": 24,
+            }
+          }
+        />
+        <Text
+          numberOfLines={1}
+          style={
+            [
+              {
+                "color": "#008f7e",
+                "fontSize": 16,
+                "marginLeft": 8,
+                "maxWidth": 300,
+              },
+              {
+                "fontFamily": "Gotham-Light",
+              },
+            ]
+          }
+        >
+          Agregar dirección de la entrega
+        </Text>
+      </View>
+    </View>
+  </View>,
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "#fff",
+          "borderColor": "#00000029",
+          "borderStyle": "solid",
+          "borderTopLeftRadius": 28,
+          "borderTopRightRadius": 28,
+          "borderWidth": 1,
+          "height": "100%",
+          "paddingBottom": 0,
+          "paddingLeft": 16,
+          "paddingRight": 0,
+          "paddingTop": 42,
+        },
+      ]
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View>
+          <Text
+            style={
+              [
+                {
+                  "color": "#333333",
+                  "fontSize": 18,
+                  "marginBottom": 6,
+                },
+                {
+                  "fontFamily": "Gotham-Bold",
+                },
+              ]
+            }
+          >
+            RESTAURANTES
+          </Text>
+          <RCTScrollView
+            horizontal={true}
+          >
+            <View>
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                  }
+                }
+              />
+            </View>
+          </RCTScrollView>
+        </View>
+        <View
+          style={
+            {
+              "marginTop": 20,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#333333",
+                  "fontSize": 18,
+                  "marginBottom": 6,
+                  "marginTop": 32,
+                },
+                {
+                  "fontFamily": "Gotham-Bold",
+                },
+              ]
+            }
+          >
+            CATEGORIAS
+          </Text>
+          <RCTScrollView
+            horizontal={true}
+          >
+            <View>
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "marginRight": 6,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "alignContent": "center",
+                          "alignItems": "center",
+                          "display": "flex",
+                          "height": 90,
+                          "width": 168,
+                        },
+                      ]
+                    }
+                  >
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#fff",
+                            "fontSize": 16,
+                            "letterSpacing": 1,
+                            "marginTop": 30,
+                            "position": "absolute",
+                            "zIndex": 2,
+                          },
+                          {
+                            "fontFamily": "Gotham-Bold",
+                          },
+                        ]
+                      }
+                    >
+                      HAMBURGUESAS
+                    </Text>
+                    <View
+                      accessibilityIgnoresInvertColors={true}
+                      style={
+                        [
+                          {
+                            "height": 80,
+                            "width": 174,
+                          },
+                        ]
+                      }
+                    >
+                      <Image
+                        source={
+                          {
+                            "testUri": "../../../assets/imgs/hamburguer.png",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            },
+                            {
+                              "height": 80,
+                              "width": 174,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    {
+                      "marginRight": 6,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "alignContent": "center",
+                          "alignItems": "center",
+                          "display": "flex",
+                          "height": 90,
+                          "width": 168,
+                        },
+                      ]
+                    }
+                  >
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#fff",
+                            "fontSize": 16,
+                            "letterSpacing": 1,
+                            "marginTop": 30,
+                            "position": "absolute",
+                            "zIndex": 2,
+                          },
+                          {
+                            "fontFamily": "Gotham-Bold",
+                          },
+                        ]
+                      }
+                    >
+                      ITALIANA
+                    </Text>
+                    <View
+                      accessibilityIgnoresInvertColors={true}
+                      style={
+                        [
+                          {
+                            "height": 80,
+                            "width": 174,
+                          },
+                        ]
+                      }
+                    >
+                      <Image
+                        source={
+                          {
+                            "testUri": "../../../assets/imgs/italian.png",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            },
+                            {
+                              "height": 80,
+                              "width": 174,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    {
+                      "marginRight": 6,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "alignContent": "center",
+                          "alignItems": "center",
+                          "display": "flex",
+                          "height": 90,
+                          "width": 168,
+                        },
+                      ]
+                    }
+                  >
+                    <Text
+                      style={
+                        [
+                          {
+                            "color": "#fff",
+                            "fontSize": 16,
+                            "letterSpacing": 1,
+                            "marginTop": 30,
+                            "position": "absolute",
+                            "zIndex": 2,
+                          },
+                          {
+                            "fontFamily": "Gotham-Bold",
+                          },
+                        ]
+                      }
+                    >
+                      PIZZAS
+                    </Text>
+                    <View
+                      accessibilityIgnoresInvertColors={true}
+                      style={
+                        [
+                          {
+                            "height": 80,
+                            "width": 174,
+                          },
+                        ]
+                      }
+                    >
+                      <Image
+                        source={
+                          {
+                            "testUri": "../../../assets/imgs/pizza.png",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            },
+                            {
+                              "height": 80,
+                              "width": 174,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+        <View
+          style={
+            {
+              "marginBottom": 80,
+              "marginTop": 40,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#333333",
+                  "fontSize": 18,
+                  "marginBottom": 6,
+                },
+                {
+                  "fontFamily": "Gotham-Bold",
+                },
+              ]
+            }
+          >
+            TUS FAVORITOS
+          </Text>
+          <RCTScrollView
+            horizontal={true}
+          >
+            <View>
+              <View
+                style={
+                  {
+                    "flexDirection": "row",
+                    "marginBottom": 80,
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "marginRight": 12,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "display": "flex",
+                          "height": 102,
+                          "width": 260,
+                        },
+                      ]
+                    }
+                  >
+                    <Image
+                      source={
+                        {
+                          "testUri": "../../../assets/imgs/mc.png",
+                        }
+                      }
+                      style={
+                        [
+                          {
+                            "height": 44,
+                            "marginLeft": 11,
+                            "marginTop": 9,
+                            "position": "absolute",
+                            "width": 44,
+                            "zIndex": 1,
+                          },
+                        ]
+                      }
+                    />
+                    <View
+                      accessibilityIgnoresInvertColors={true}
+                      style={
+                        [
+                          {
+                            "height": 102,
+                            "width": 260,
+                          },
+                        ]
+                      }
+                    >
+                      <Image
+                        source={
+                          {
+                            "testUri": "../../../assets/imgs/mcBack.png",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            },
+                            {
+                              "height": 102,
+                              "width": 260,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      [
+                        {
+                          "borderBottomLeftRadius": 16,
+                          "borderBottomRightRadius": 16,
+                          "borderColor": "#EDEDED",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "display": "flex",
+                          "maxWidth": 260,
+                          "paddingBottom": 8,
+                          "paddingLeft": 8,
+                          "paddingRight": 8,
+                          "paddingTop": 8,
+                          "width": "100%",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        [
+                          {
+                            "alignItems": "center",
+                            "display": "flex",
+                            "flexDirection": "row",
+                            "justifyContent": "space-between",
+                            "marginBottom": 3,
+                            "maxWidth": 260,
+                            "width": "100%",
+                          },
+                        ]
+                      }
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#333333",
+                              "fontSize": 13,
+                            },
+                            {
+                              "fontFamily": "Gotham-Medium",
+                            },
+                          ]
+                        }
+                      >
+                        Combo hamburguesa Bigmac
+                      </Text>
+                      <View
+                        style={
+                          [
+                            {
+                              "alignItems": "center",
+                              "display": "flex",
+                              "flexDirection": "row",
+                            },
+                          ]
+                        }
+                      >
+                        <Image
+                          source={
+                            {
+                              "testUri": "../../../assets/imgs/starmini.png",
+                            }
+                          }
+                          style={
+                            [
+                              {
+                                "height": 16,
+                                "marginRight": 2,
+                                "width": 16,
+                              },
+                            ]
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#333333",
+                                "fontSize": 12,
+                              },
+                              {
+                                "fontFamily": "Gotham-Medium",
+                              },
+                            ]
+                          }
+                        >
+                          3.5
+                        </Text>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        [
+                          {
+                            "alignItems": "center",
+                            "display": "flex",
+                            "flexDirection": "row",
+                            "justifyContent": "space-between",
+                            "maxWidth": 260,
+                            "width": "100%",
+                          },
+                        ]
+                      }
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#00baa4",
+                              "fontSize": 13,
+                            },
+                            {
+                              "fontFamily": "Gotham-Bold",
+                            },
+                          ]
+                        }
+                      >
+                        Mcdonalds
+                      </Text>
+                      <View>
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#333333",
+                                "fontSize": 12,
+                              },
+                              {
+                                "fontFamily": "Gotham-Medium",
+                              },
+                            ]
+                          }
+                        >
+                          10-50
+                           min
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    {
+                      "marginRight": 12,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      [
+                        {
+                          "display": "flex",
+                          "height": 102,
+                          "width": 260,
+                        },
+                      ]
+                    }
+                  >
+                    <Image
+                      source={
+                        {
+                          "testUri": "../../../assets/imgs/melt.png",
+                        }
+                      }
+                      style={
+                        [
+                          {
+                            "height": 44,
+                            "marginLeft": 11,
+                            "marginTop": 9,
+                            "position": "absolute",
+                            "width": 44,
+                            "zIndex": 1,
+                          },
+                        ]
+                      }
+                    />
+                    <View
+                      accessibilityIgnoresInvertColors={true}
+                      style={
+                        [
+                          {
+                            "height": 102,
+                            "width": 260,
+                          },
+                        ]
+                      }
+                    >
+                      <Image
+                        source={
+                          {
+                            "testUri": "../../../assets/imgs/meltBack.png",
+                          }
+                        }
+                        style={
+                          [
+                            {
+                              "bottom": 0,
+                              "left": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                            },
+                            {
+                              "height": 102,
+                              "width": 260,
+                            },
+                            undefined,
+                          ]
+                        }
+                      />
+                    </View>
+                  </View>
+                  <View
+                    style={
+                      [
+                        {
+                          "borderBottomLeftRadius": 16,
+                          "borderBottomRightRadius": 16,
+                          "borderColor": "#EDEDED",
+                          "borderStyle": "solid",
+                          "borderWidth": 1,
+                          "display": "flex",
+                          "maxWidth": 260,
+                          "paddingBottom": 8,
+                          "paddingLeft": 8,
+                          "paddingRight": 8,
+                          "paddingTop": 8,
+                          "width": "100%",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        [
+                          {
+                            "alignItems": "center",
+                            "display": "flex",
+                            "flexDirection": "row",
+                            "justifyContent": "space-between",
+                            "marginBottom": 3,
+                            "maxWidth": 260,
+                            "width": "100%",
+                          },
+                        ]
+                      }
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#333333",
+                              "fontSize": 13,
+                            },
+                            {
+                              "fontFamily": "Gotham-Medium",
+                            },
+                          ]
+                        }
+                      >
+                        Pizza Mediana 3 ingredientes
+                      </Text>
+                      <View
+                        style={
+                          [
+                            {
+                              "alignItems": "center",
+                              "display": "flex",
+                              "flexDirection": "row",
+                            },
+                          ]
+                        }
+                      >
+                        <Image
+                          source={
+                            {
+                              "testUri": "../../../assets/imgs/starmini.png",
+                            }
+                          }
+                          style={
+                            [
+                              {
+                                "height": 16,
+                                "marginRight": 2,
+                                "width": 16,
+                              },
+                            ]
+                          }
+                        />
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#333333",
+                                "fontSize": 12,
+                              },
+                              {
+                                "fontFamily": "Gotham-Medium",
+                              },
+                            ]
+                          }
+                        >
+                          4.5
+                        </Text>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        [
+                          {
+                            "alignItems": "center",
+                            "display": "flex",
+                            "flexDirection": "row",
+                            "justifyContent": "space-between",
+                            "maxWidth": 260,
+                            "width": "100%",
+                          },
+                        ]
+                      }
+                    >
+                      <Text
+                        style={
+                          [
+                            {
+                              "color": "#00baa4",
+                              "fontSize": 13,
+                            },
+                            {
+                              "fontFamily": "Gotham-Bold",
+                            },
+                          ]
+                        }
+                      >
+                        MELT pizzas
+                      </Text>
+                      <View>
+                        <Text
+                          style={
+                            [
+                              {
+                                "color": "#333333",
+                                "fontSize": 12,
+                              },
+                              {
+                                "fontFamily": "Gotham-Medium",
+                              },
+                            ]
+                          }
+                        >
+                          10-60
+                           min
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
+]
+`;

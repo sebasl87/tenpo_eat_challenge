@@ -1,5 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HeaderLocation component should render successfully with mock && length 1`] = `
+<View
+  style={
+    {
+      "height": 1200,
+      "position": "absolute",
+      "width": "100%",
+      "zIndex": 100,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "flex-end",
+        "backgroundColor": "#D4F9F5",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingTop": 80,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "display": "flex",
+          "flexDirection": "row",
+          "marginBottom": 32,
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/icons/location.png",
+          }
+        }
+        style={
+          {
+            "height": 24,
+            "marginRight": 6,
+            "paddingTop": 30,
+            "width": 24,
+          }
+        }
+      />
+      <Text
+        style={
+          {
+            "color": "#2c8f7e",
+            "fontFamily": "Roboto-light",
+            "fontSize": 18,
+            "paddingTop": 3,
+          }
+        }
+      >
+        casa
+      </Text>
+    </View>
+  </View>
+  <TextInput
+    clearButtonMode="always"
+    placeholder="Escribe tu dirección"
+    style={
+      {
+        "backgroundColor": "#fff",
+        "borderRadius": 50,
+        "color": "#2c8f7e",
+        "fontFamily": "Roboto-light",
+        "fontSize": 16,
+        "minHeight": 56,
+        "paddingLeft": 16,
+        "paddingTop": 3,
+        "shadowOffset": {
+          "height": 6,
+          "width": 0,
+        },
+        "shadowOpacity": 0.3,
+        "shadowRadius": 4,
+        "top": -16,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`HeaderLocation component should render successfully with mock 1`] = `
 <View
   style={
