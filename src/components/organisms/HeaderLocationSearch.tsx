@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Image, Text, View } from 'react-native';
 import { styles } from '../../styles/styles';
 import { AppDispatch } from '../../store';
-import { REACT_APP_GOOGLE_GEOCODE_KEY } from '@env';
+import { REACT_APP_GOOGLE_GEOCODE_KEY } from 'dotenv';
 import { setAddress } from '../../store/addressSlice';
 import { Location } from '../../store/googleSlice';
 export interface IHeader {

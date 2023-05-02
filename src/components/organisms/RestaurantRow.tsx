@@ -22,8 +22,10 @@ const RestaurantRow: React.FC<IRestaurantRow> = ({ restoList }) => {
             <Title style={{ fontFamily: "Gotham-Bold" }}>RESTAURANTES</Title>
             <ScrollView horizontal={true}>
                 <View style={{ flexDirection: "row" }}>
-                    {restoList.map((resto, i) => (
-                        <TouchableOpacity key={resto.id + "-" + i} onPress={() => { navigation.navigate("RestaurantDetail", { resto }) }}>
+                    {restoList?.map((resto, i) => (
+                        <TouchableOpacity
+                            testID='clickMeRestaurantRow'
+                            key={resto.id + "-" + i} onPress={() => { navigation.navigate("RestaurantDetail", { resto }) }}>
                             <View style={{ marginRight: 12 }}>
                                 <DiscountCircle discount={resto.discount} />
                                 <LogoRounded image={resto.uri} bgColor={resto.bgColor} />

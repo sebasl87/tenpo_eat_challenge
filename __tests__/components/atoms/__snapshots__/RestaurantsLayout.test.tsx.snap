@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantsLayout component should render successfully with RestaurantsLayout 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#fff",
+        "borderColor": "#00000029",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 28,
+        "borderTopRightRadius": 28,
+        "borderWidth": 1,
+        "height": "100%",
+        "paddingBottom": 0,
+        "paddingLeft": 16,
+        "paddingRight": 0,
+        "paddingTop": 42,
+      },
+    ]
+  }
+>
+  RestaurantsLayout_mock
+</View>
+`;

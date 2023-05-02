@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Location /> should render successfully 1`] = `
+[
+  <Modal
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ADADAD",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginTop": 22,
+          "opacity": 0.5,
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/imgs/wait.gif",
+          }
+        }
+        style={
+          {
+            "height": 150,
+            "width": 300,
+          }
+        }
+      />
+    </View>
+  </Modal>,
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "marginTop": "25%",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#ADADAD",
+          "fontFamily": "Roboto-light",
+          "fontSize": 18,
+          "paddingTop": 3,
+        }
+      }
+    >
+      Esperando tu ubicación...
+    </Text>
+  </View>,
+]
+`;
+
+exports[`<Location /> should render successfully with location 1`] = `
+[
+  <Modal
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ADADAD",
+          "flex": 1,
+          "justifyContent": "center",
+          "marginTop": 22,
+          "opacity": 0.5,
+        }
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/imgs/wait.gif",
+          }
+        }
+        style={
+          {
+            "height": 150,
+            "width": 300,
+          }
+        }
+      />
+    </View>
+  </Modal>,
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "marginTop": "25%",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#ADADAD",
+          "fontFamily": "Roboto-light",
+          "fontSize": 18,
+          "paddingTop": 3,
+        }
+      }
+    >
+      Esperando tu ubicación...
+    </Text>
+  </View>,
+]
+`;

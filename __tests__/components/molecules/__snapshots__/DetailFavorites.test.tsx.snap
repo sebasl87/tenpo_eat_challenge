@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailFavorites component should render successfully with DetailFavorites 1`] = `
+<View
+  style={
+    [
+      {
+        "borderBottomLeftRadius": 16,
+        "borderBottomRightRadius": 16,
+        "borderColor": "#EDEDED",
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "display": "flex",
+        "maxWidth": 260,
+        "paddingBottom": 8,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 8,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 3,
+          "maxWidth": 260,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#333333",
+            "fontSize": 13,
+          },
+          {
+            "fontFamily": "Gotham-Medium",
+          },
+        ]
+      }
+    >
+      DetailFavorites_mock
+    </Text>
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/imgs/starmini.png",
+          }
+        }
+        style={
+          [
+            {
+              "height": 16,
+              "marginRight": 2,
+              "width": 16,
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          [
+            {
+              "color": "#333333",
+              "fontSize": 12,
+            },
+            {
+              "fontFamily": "Gotham-Medium",
+            },
+          ]
+        }
+      >
+        DetailFavorites_mock
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": 260,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#00baa4",
+            "fontSize": 13,
+          },
+          {
+            "fontFamily": "Gotham-Bold",
+          },
+        ]
+      }
+    >
+      DetailFavorites_mock
+    </Text>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#333333",
+              "fontSize": 12,
+            },
+            {
+              "fontFamily": "Gotham-Medium",
+            },
+          ]
+        }
+      >
+        DetailFavorites_mock
+         min
+      </Text>
+    </View>
+  </View>
+</View>
+`;

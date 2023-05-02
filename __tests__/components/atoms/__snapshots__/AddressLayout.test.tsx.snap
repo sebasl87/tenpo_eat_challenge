@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressLayout component should render successfully with AddressLayout 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#D4F9F5",
+        "borderTopLeftRadius": 28,
+        "borderTopRightRadius": 28,
+        "paddingBottom": 18,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 20,
+      },
+    ]
+  }
+>
+  AddressLayout_mock
+</View>
+`;

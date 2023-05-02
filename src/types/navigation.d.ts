@@ -1,4 +1,4 @@
-import { RootStackParamTenpo } from './App';
+import { RootStackParamTenpo } from "../../App";
 
 declare global {
   namespace ReactNavigation {

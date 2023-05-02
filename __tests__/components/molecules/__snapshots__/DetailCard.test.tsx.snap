@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailCard component should render successfully with DetailCard 1`] = `
+<View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "maxWidth": 104,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#333333",
+            "fontSize": 14,
+          },
+          {
+            "fontFamily": "Gotham-Medium",
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "maxWidth": 104,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../assets/imgs/starmini.png",
+          }
+        }
+        style={
+          [
+            {
+              "height": 16,
+              "marginRight": 2,
+              "width": 16,
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          [
+            {
+              "color": "#333333",
+              "fontSize": 12,
+            },
+            {
+              "fontFamily": "Gotham-Medium",
+            },
+          ]
+        }
+      >
+        DetailCard_mock
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          [
+            {
+              "color": "#333333",
+              "fontSize": 12,
+            },
+            {
+              "fontFamily": "Gotham-Medium",
+            },
+          ]
+        }
+      >
+        DetailCard_mock
+         min
+      </Text>
+    </View>
+  </View>
+</View>
+`;

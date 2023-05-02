@@ -16,7 +16,7 @@ import styled from 'styled-components/native';
 import { styles } from '../../styles/styles';
 import { setAddress } from '../../store/addressSlice';
 
-function Location() {
+const Location = () => {
     const [location, setLocation] = useState<IGoogleMaps>()
     const [addresData, setAddresData] = useState<string>()
     const dispatch = useDispatch<AppDispatch>();

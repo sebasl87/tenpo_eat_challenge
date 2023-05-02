@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContainerAddressData component should render successfully 1`] = `
+<View
+  style={
+    {
+      "padding": 16,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#333333",
+          "fontFamily": "Gotham-Bold",
+          "fontSize": 18,
+          "marginBottom": 6,
+        },
+      ]
+    }
+  >
+    Agregar información de entrega
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "#333333",
+          "fontFamily": "Gotham-Book",
+          "fontSize": 14,
+          "marginBottom": 12,
+        },
+        {
+          "color": "#ADADAD",
+        },
+      ]
+    }
+  >
+    Depto, Oficina, Piso, Block
+  </Text>
+  <TextInput
+    defaultValue="123"
+    multiline={true}
+    onChangeText={[Function]}
+    style={
+      {
+        "borderColor": "#E8E8E8",
+        "borderRadius": 6,
+        "borderWidth": 1,
+        "height": 122,
+      }
+    }
+  />
+</View>
+`;

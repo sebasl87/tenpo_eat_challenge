@@ -71,6 +71,7 @@ const LogoRestaurantAndDetail: React.FC<IRestaurantsLayout> = ({ bgColor, image,
                 <ContainerCenter>
                     <TouchableOpacity
                         onPress={() => navigation.navigate("Home")}
+                        testID="clickMe"
                     >
                         <Container bgColor={bgColor}>
                             <Images
